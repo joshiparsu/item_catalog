@@ -1,0 +1,282 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+    <title>Your Reads...</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
+    <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"> </script>
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+    <script type="text/javascript">
+
+    $(function() {
+        $(".modify_review").bind('click', function(event) {
+            event.preventDefault();
+            var userid = $(this).data("userid");
+            var bookid = $(this).data("bookid");
+            var index = $(this).data("activeindex");
+            var commentId = ("#comment") + index;
+            var comment_text = $(commentId).text();
+
+            $("#modify-comment-dialog").data("userid", userid);
+            $("#modify-comment-dialog").data("bookid", bookid);
+            $("#modify-comment-dialog").data("index", index);
+            $("#modify-comment-dialog").data("comment", comment_text);
+
+            $("#modify-comment-dialog").dialog({
+                modal: true,
+                width: 600,
+                height: 200,
+                title: "Modify review",
+                open: function() {
+                    var content = '<textarea class="ui-corner-all ui-widget-content" id="newReviewComment" maxlength="1199"></textarea>';
+                    $(this).html(content);
+                    var trimmedComment = $(this).data("comment").trim();
+                    $("#newReviewComment").text(trimmedComment);
+                    $("#newReviewComment").css('width', '100%');
+                    $("#newReviewComment").css('height', '100%');
+                    $("#newReviewComment").css('box-sizing','border-box');
+                    $("#newReviewComment").css('font-size', '1.2em');
+                },
+                buttons: {
+                    "Post": function () {
+                        $(commentId).text($("#newReviewComment").val());
+                        $(this).dialog('close');
+                        modifyReviewCallback($(this).data("userid"),
+                                             $(this).data("bookid"),
+                                             $("#newReviewComment").val());
+                    }
+                },
+                hide: {
+                    effect: "scale",
+                    easing: "easeInBack"
+                },
+                show: {
+                    effect: "scale",
+                    easing: "easeOutBack"
+                }
+            });
+        });
+    });
+
+    function modifyReviewCallback(userid, bookid, newComment)
+    {
+            var values = {};
+            values['userid']= userid.toString();
+            values['bookid'] = bookid.toString();
+            values['comment'] = newComment.toString(); 
+
+            $.ajax({
+                type: 'POST',
+                url: '/modifyReview',
+                data: JSON.stringify(values, null, '\t'),
+                contentType: "application/json; charset=UTF-8",
+                success: function(response) {
+                    console.log('Success');
+                },
+                error: function(jqXHR, exception) {
+                    console.log("jqXHR.status = "  + jqXHR.status);
+                    console.log("jqXHR.responseText" + jqXHR.responseText);
+                }
+            });
+    }
+
+
+    function deleteReviewCallback(userid, bookid, index)
+    {
+        var values = {};
+        values['userid']= userid.toString();
+        values['bookid'] = bookid.toString();
+        $.ajax({
+            type: 'POST',
+            url: '/deleteReview',
+            data: JSON.stringify(values, null, '\t'),
+            contentType: "application/json; charset=UTF-8",
+            success: function(response) {
+                var removeItem = "#bookdetail" + index;
+                $(removeItem).remove();
+            },
+            error: function(jqXHR, exception) {
+                console.log("jqXHR.status = "  + jqXHR.status);
+                console.log("jqXHR.responseText" + jqXHR.responseText);
+            }
+        });
+    }
+
+    $(function() {
+        $(".delete_review").bind('click', function(event) {
+            event.preventDefault();
+            var userid = $(this).data("userid");
+            var bookid = $(this).data("bookid");
+            var index = $(this).data("activeindex");
+
+            $("#delete-confirm-dialog").data("userid", userid);
+            $("#delete-confirm-dialog").data("bookid", bookid);
+            $("#delete-confirm-dialog").data("index", index);
+            $("#delete-confirm-dialog").dialog({
+                modal: true,
+                title: "Confirm deletion",
+                open: function() {
+                    var content = "";
+                    content = "Are you sure want to delete this review?";
+                    $(this).html(content);
+                },
+                buttons: {
+                    "Yes": function () {
+                        $(this).dialog('close');
+                        deleteReviewCallback($(this).data("userid"),
+                                             $(this).data("bookid"),
+                                             $(this).data("index"));
+                    },
+                    "No": function () {
+                        $(this).dialog('close');
+                    }
+                },
+                hide: {
+                    effect: "scale",
+                    easing: "easeInBack"
+                },
+                show: {
+                    effect: "scale",
+                    easing: "easeOutBack"
+                }
+            });
+        });
+    });
+    </script>
+    <style>
+    .ui-dialog-titlebar-close{
+        display: none;
+    }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+
+        <div class="header" style="background:url(../../static/header.jpg) no-repeat center;">
+            <div class="logo">
+                <a href="{{ url_for('HomePage') }}"><img src="../../static/logo.gif" alt="" border="0" /></a>
+            </div>
+            <div id="menu">
+                <ul>                                                                       
+                    <li class="selected"><a href="{{ url_for('HomePage') }}">Home</a></li>
+                    <li><a href="{{ url_for('listBooks', page=1) }}">Books</a></li>
+                    <li><a href="{{ url_for('contactMe')}}">Contact Me</a></li>
+                </ul>
+            </div>
+            <div id="menu_right">
+                <div class="dropdown">
+                    {% if session['logged_in'] %}
+                        <a href="#" class="dropbtn">My Account</a>
+                        <div class="dropdown-content">
+                            <a href="{{ url_for('userReadingList') }}">My Books</a>
+                            <a href="{{ url_for('userReviews') }}">My Reviews</a>
+                            <a href="{{ url_for('logout') }}">Log out</a>
+                        </div>
+                    {% else %}
+                        <a href="{{ url_for('logIn') }}" class="dropbtn">Login</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <div class="center_content">
+            <div class="left_content">
+                <div class="title">
+                    <span class="title_icon">
+                        <img src="../../static/bullet1.gif" />
+                    </span>
+                    You're interested in....
+                </div>
+                {% set activeIndex = 1 %}
+
+                {% for review in reviews %}
+                    <div class="feat_prod_box" id="bookdetail{{activeIndex}}">
+                        <div class="prod_img">
+                            <a href="{{ url_for('showBook', book_id=review.id) }}">
+                                <img src="{{review.image_url}}" style="max-width:100%; max-height:100%;" border="0" />
+                            </a>
+                        </div>
+                        <div class="prod_det_box">
+                            <div class="box_top">
+                            </div>
+                            <div class="box_center">
+                                <div class="prod_title">
+                                    {{review.title}}
+                                </div>
+                                <p class="details" id="comment{{activeIndex}}">
+                                    {{review.comment}}
+                                </p>
+                                <span class="modify_review"
+                                      data-activeindex="{{activeIndex}}"
+                                      data-bookid="{{review.id}}" 
+                                      data-userid="{{session['user_id']}}">
+                                    <span class="buttonlink" style="margin:10px 20px;">
+                                        Modify...
+                                    </span>
+                                </span>
+                                <span class="delete_review"
+                                      data-activeindex="{{activeIndex}}"
+                                      data-bookid="{{review.id}}" 
+                                      data-userid="{{session['user_id']}}">
+                                    <span class="buttonlink" style="margin:10px 20px;">
+                                        Delete...
+                                    </span>
+                                </span>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="box_bottom"></div>
+                        </div>    
+                        <div class="clear"></div>
+                    </div>
+                    {% set activeIndex = activeIndex + 1 %}
+                {% endfor %}
+                <div id="delete-confirm-dialog"></div>
+                <div id="modify-comment-dialog"></div>
+                
+                <div class="clear"></div>
+
+            </div><!--end of left content-->
+
+            <div class="right_content">
+                <div class="title">
+                    <span class="title_icon">
+                        <img src="../../static/bullet2.gif" />
+                    </span>
+                    New books
+                </div>
+                <div class="new_products">
+                {% for newBook in newBooks %}
+                    <div class="new_prod_box">
+                        <a href="{{ url_for('showBook', book_id=newBook.id) }}"> {{newBook.title}} </a>
+                        <div class="new_prod_bg">
+                            <span class="new_icon"><img src="../../static/new_icon.gif" /></span>
+                            <a href="{{ url_for('showBook', book_id=newBook.id) }}">
+                                <img src="{{newBook.image_url}}" class="thumb" border="0" />
+                            </a>
+                        </div>
+                    </div>
+                {% endfor %}
+                </div>
+
+                <div class="clear"></div>
+                <div class="title">
+                    <span class="title_icon"><img src="../../static/bullet3.gif" /></span>
+                    About Me
+                </div>
+                <div class="about">
+                    <p>
+                        <img src="../../static/about.gif" class="right" />
+                        I'm a software engineer who is working on Windows driver development for past couple of years. However, lately, I've started learning things like Python, Flask, HTML5, CSS, jQuery etc. This is a simple project to demonstrate the skills that I've learnt over the last few months...
+                    </p>
+                </div>
+            </div><!--end of right content-->
+            <div class="clear"></div>
+        </div><!--end of center content-->
+    </div>
+</body>
+</html>

@@ -1,0 +1,1530 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "The Hunger Games",
+      "author" : "Suzana Collins",
+      "publisher" : "Scholastic Press",
+      "genre" : "Science Fiction",
+      "description" : "In the ruins of a place once known as North America lies the nation of Panem, a shining Capitol surrounded by twelve outlying districts. Long ago the districts waged war on the Capitol and were defeated. As part of the surrender terms, each district agreed to send one boy and one girl to appear in an annual televised event called, The Hunger Games, a fight to the death on live TV. Sixteen-year-old Katniss Everdeen, who lives alone with her mother and younger sister, regards it as a death sentence when she is forced to represent her district in the Games. The terrain, rules, and level of audience participation may change but one thing is constant: kill or be killed",
+      "image_url" : "http://ecx.images-amazon.com/images/I/41jG4xQjjsL._SX326_BO1,204,203,200_.jpg",
+      "buy_link" : "http://www.amazon.com/gp/product/B002MQYOFW/ref=series_rw_dp_sw",
+      "publish_date" : "2009-09-01"
+    },
+    {
+      "id": 2,
+      "title": "Divergent",
+      "author" : "Veronica Roth",
+      "publisher" : "Katherine Tegen",
+      "genre" : "Science Fiction",
+      "description" : "In Beatrice Prior’s dystopian Chicago world, society is divided into five factions, each dedicated to the cultivation of a particular virtue—Candor (the honest), Abnegation (the selfless), Dauntless (the brave), Amity (the peaceful), and Erudite (the intelligent). On an appointed day of every year, all sixteen-year-olds must select the faction to which they will devote the rest of their lives. For Beatrice, the decision is between staying with her family and being who she really is—she can’t have both. So she makes a choice that surprises everyone, including herself.",
+      "image_url" : "http://ecx.images-amazon.com/images/I/51edZ%2BNaJRL._SX331_BO1,204,203,200_.jpg",
+      "buy_link" : "http://www.amazon.com/Divergent-Veronica-Roth/dp/0062024035",
+      "publish_date" : "2012-02-28"
+    },
+    {
+      "id": 3,
+      "title": "Wool",
+      "author" : "Hugh Howey",
+      "publisher" : "Simon & Schuster",
+      "genre" : "Science Fiction",
+      "description" : "This is the story of mankind clawing for survival, of mankind on the edge. The world outside has grown unkind, the view of it limited, talk of it forbidden. But there are always those who hope, who dream. These are the dangerous people, the residents who infect others with their optimism. Their punishment is simple. They are given the very thing they profess to want: They are allowed outside",
+      "image_url" : "http://ecx.images-amazon.com/images/I/61lrCdT5rGL._SX325_BO1,204,203,200_.jpg",
+      "buy_link" : "http://www.amazon.com/Wool-Hugh-Howey/dp/1491512644",
+      "publish_date" : "2012-03-12"
+    },
+    {
+      "id": 4,
+      "title": "Dune",
+      "author" : "Frank Herbert",
+      "publisher" : "Chilton Books",
+      "genre" : "Science Fiction",
+      "description" : "Dune is the story of the boy Paul Atreides, who would become the mysterious man known as Muad'Dib. He would avenge the traitorous plot against his noble family--and would bring to fruition humankind's most ancient and unattainable dream.",
+      "image_url" : "https://upload.wikimedia.org/wikipedia/en/5/5a/FrankHerbert_Dune_1st.jpg",
+      "buy_link" : "http://www.amazon.com/Dune-Frank-Herbert/dp/0441172717",
+      "publish_date" : "1963-12-02"
+    },
+    {
+      "id": 5,
+      "title": "The Dispossessed",
+      "author" : "Ursula Guin",
+      "publisher" : "Harper and Row",
+      "genre" : "Science Fiction",
+      "description" : "Shevek, a brilliant physicist, decides to take action. he will seek answers, question the unquestionable, and attempt to tear down the walls of hatred that have isolated his planet of anarchists from the rest of the civilized universe.",
+      "image_url" : "https://upload.wikimedia.org/wikipedia/en/f/fc/TheDispossed%281stEdHardcover%29.jpg",
+      "buy_link" : "http://www.amazon.com/The-Dispossessed-An-Ambiguous-Utopia/dp/0060125632",
+      "publish_date" : "1974-05-14"
+    },
+    {
+      "id": 6,
+      "title": "Neuromancer",
+      "author" : "William Gibson",
+      "publisher" : "Harper and Row",
+      "genre" : "Science Fiction",
+      "description" : "Case had been the sharpest data-thief in the business, until vengeful former employees crippled his nervous system. But now a new and very mysterious employer recruits him for a last-chance run. The target: an unthinkably powerful artificial intelligence orbiting Earth in service of the sinister Tessier-Ashpool business clan.",
+      "image_url" : "https://upload.wikimedia.org/wikipedia/en/4/4b/Neuromancer_%28Book%29.jpg",
+      "buy_link" : "http://www.amazon.com/Neuromancer-William-Gibson/dp/0441569595",
+      "publish_date" : "1984-07-01"
+    },
+    {
+      "id": 7,
+      "title": "The Stars My Destination",
+      "author" : "Alfred Bester",
+      "publisher" : "Signet Books",
+      "genre" : "Science Fiction",
+      "description" : "Marooned in outer space after an attack on his ship, Nomad, Gulliver Foyle lives to obsessively pursue the crew of a rescue vessel that had intended to leave him to die.",
+      "image_url" : "https://upload.wikimedia.org/wikipedia/en/9/91/TSTRSMD1957.jpg",
+      "buy_link" : "http://www.amazon.com/The-Stars-Destination-Alfred-Bester/dp/1876963468",
+      "publish_date" : "1957-03-20"
+    },
+    {
+      "id": 8,
+      "title": "Use of Weapons",
+      "author" : "Iain Banks",
+      "publisher" : "Orbit",
+      "genre" : "Science Fiction",
+      "description" : "The man known as Cheradenine Zakalwe was one of Special Circumstances' foremost agents, changing the destiny of planets to suit the Culture through intrigue, dirty tricks or military action.\r\nThe woman known as Diziet Sma had plucked him from obscurity and pushed him towards his present eminence, but despite all their dealings she did not know him as well as she thought.",
+      "image_url" : "https://upload.wikimedia.org/wikipedia/en/e/ef/IainMBanksUseofWeapons.jpg",
+      "buy_link" : "http://www.amazon.com/Use-Weapons-Culture-Iain-Banks/dp/0316030570",
+      "publish_date" : "1990-09-13"
+    },
+    {
+      "id": 9,
+      "title": "The Foundation",
+      "author" : "Isaac Asimov",
+      "publisher" : "Gnome Press",
+      "genre" : "Science Fiction",
+      "description" : "For twelve thousand years the Galactic Empire has ruled supreme. Now it is dying. But only Hari Seldon, creator of the revolutionary science of psychohistory, can see into the future -- to a dark age of ignorance, barbarism, and warfare that will last thirty thousand years.",
+      "image_url" : "http://ecx.images-amazon.com/images/I/51%2Bel2k0F4L._SX331_BO1,204,203,200_.jpg",
+      "buy_link" : "http://www.amazon.com/Foundation-Isaac-Asimov/dp/0553293354",
+      "publish_date" : "1951-04-23"
+    },
+    {
+      "id": 10,
+      "title": "2001 : A Space Odyssey",
+      "author" : "Arthur Clarke",
+      "publisher" : "Hutchinson",
+      "genre" : "Science Fiction",
+      "description" : "When an enigmatic monolith is found buried on the moon, scientists are amazed to discover that it's at least 3 million years old. Even more amazing, after it's unearthed the artifact releases a powerful signal aimed at Saturn. What sort of alarm has been triggered? To find out, a manned spacecraft, the Discovery, is sent to investigate. Its crew is highly trained--the best--and they are assisted by a self-aware computer, the ultra-capable HAL 9000. But HAL's programming has been patterned after the human mind a little too well. He is capable of guilt, neurosis, even murder, and he controls every single one of Discovery's components. The crew must overthrow this digital psychotic if they hope to make their rendezvous with the entities that are responsible not just for the monolith, but maybe even for human civilization.",
+      "image_url" : "http://ecx.images-amazon.com/images/I/41S1gkKtj-L._SX373_BO1,204,203,200_.jpg",
+      "buy_link" : "http://www.amazon.com/2001-Odyssey-Arthur-C-Clarke-ebook/dp/B00ANA27IU",
+      "publish_date" : "1951-04-23"
+    },
+    {
+      "id": 11,
+      "title": "Introduction to Algorithms",
+      "author" : "Thomas Cormen",
+      "publisher" : "MIT Press",
+      "genre" : "Computer Science",
+      "description" : "A comprehensive textbook covering the full spectrum of modern algorithms: from the fastest algorithms and data structures to polynomial-time algorithms for seemingly intractable problems, from classical algorithms in graph theory to special algorithms for string matching, computational geometry, and number theory. The revised third edition notably adds a chapter on van Emde Boas trees, one of the most useful data structures, and on multithreaded algorithms, a topic of increasing importance.",
+      "image_url" : "http://ecx.images-amazon.com/images/I/41S1gkKtj-L._SX373_BO1,204,203,200_.jpg",
+      "buy_link" : "http://www.amazon.com/Introduction-Algorithms-Edition-Thomas-Cormen/dp/0262033844",
+      "publish_date" : "1990-09-20"
+    },
+    {
+      "id": 12,
+      "title": "Structure and Interpretation of Computer Programs",
+      "author" : "Herald Abelson",
+      "publisher" : "MIT Press",
+      "genre" : "Computer Science",
+      "description" : "Book teaches readers how to program by employing the tools of abstraction and modularity. The authors' central philosophy is that programming is the task of breaking large problems into small ones. The book spends a great deal of time considering both this decomposition and the process of knitting the smaller pieces back together.",
+      "image_url" : "http://ecx.images-amazon.com/images/I/51H17R%2BbW8L._SX331_BO1,204,203,200_.jpg",
+      "buy_link" : "http://www.amazon.com/Structure-Interpretation-Computer-Programs-Engineering/dp/0262510871",
+      "publish_date" : "1985-11-17"
+    },
+    {
+      "id": 13,
+      "title": "Code Complete",
+      "author" : "Steve McConnell",
+      "publisher" : "Microsoft Press",
+      "genre" : "Computer Science",
+      "description" : "Discover the timeless techniques and strategies that help you: Design for minimum complexity and maximum creativity Reap the benefits of collaborative development Apply defensive programming techniques to reduce and flush out errors Exploit opportunities to refactor or evolve code, and do it safely Use construction practices that are right-weight for your project Debug problems quickly and effectively Resolve critical construction issues early and correctly Build quality into the beginning, middle, and end of your project",
+      "image_url" : "http://t1.gstatic.com/images?q=tbn:ANd9GcQ2ePWwEE-u-Y9D0HAIS_-r74qn2riMOZh2fgC-14NKWim-cBjK",
+      "buy_link" : "http://www.amazon.com/Code-Complete-Practical-Handbook-Construction/dp/0735619670",
+      "publish_date" : "1985-11-17"
+    },
+    {
+      "id": 14,
+      "title": "Concrete Mathematics",
+      "author" : "Donald Knuth",
+      "publisher" : "Addison Wesley",
+      "genre" : "Computer Science",
+      "description" : "This book introduces the mathematics that supports advanced computer programming and the analysis of algorithms. The primary aim of its well-known authors is to provide a solid and relevant base of mathematical skills - the skills needed to solve complex problems, to evaluate horrendous sums, and to discover subtle patterns in data. It is an indispensable text and reference not only for computer scientists.",
+      "image_url" : "http://t1.gstatic.com/images?q=tbn:ANd9GcRx0re9EdTtuFgX1Y4UenW2jyqg3_SeBQRWLUsY3O4SSYTVAFH5",
+      "buy_link" : "http://www.amazon.com/Concrete-Mathematics-Foundation-Computer-Science/dp/0201142368",
+      "publish_date" : "1994-11-17"
+    },
+    {
+      "id": 15,
+      "title": "The Soul of a New Machine",
+      "author" : "Tracy Kiddler",
+      "publisher" : "Brown and company",
+      "genre" : "Computer Science",
+      "description" : "The book is an essential chapter in the history of the machine that revolutionized the world in the twentieth century.",
+      "image_url" : "http://t1.gstatic.com/images?q=tbn:ANd9GcRbJUIXamnQZnz07yaF_MZdBLylZT2wAbMGl_wj01Oo-fh2FhMI",
+      "buy_link" : "http://www.amazon.com/The-Soul-A-New-Machine/dp/0316491977",
+      "publish_date" : "1981-08-12"
+    },
+    {
+      "id": 16,
+      "title": "The Elements of Computing Systems",
+      "author" : "Noam Nisan",
+      "publisher" : "MIT Press",
+      "genre" : "Computer Science",
+      "description" : "The Elements of Computing Systems gives students an integrated and rigorous picture of applied computer science, as its comes to play in the construction of a simple yet powerful computer system.",
+      "image_url" : "http://t3.gstatic.com/images?q=tbn:ANd9GcRjrU_OLoXD-lQdcR27ZRCUWU_eISyMBU7bWU1EEVBYwvJREVYN",
+      "buy_link" : "http://www.amazon.com/The-Elements-Computing-Systems-Principles/dp/0262640686",
+      "publish_date" : "2005-03-31"
+    },
+    {
+      "id": 17,
+      "title": "The Little Schemer",
+      "author" : "Daniel Friedman",
+      "publisher" : "MIT Press",
+      "genre" : "Computer Science",
+      "description" : "The Little Schemer introduces computing as an extension of arithmetic and algebra; things that everyone studies in grade school and high school. It introduces programs as recursive functions and briefly discusses the limits of what computers can do",
+      "image_url" : "http://t2.gstatic.com/images?q=tbn:ANd9GcTLkFAyR9SUgwLZpgGvRXYdvIv_kS4GMGogolkUE44C_ujoWrrm",
+      "buy_link" : "http://www.amazon.com/The-Little-Schemer-4th-Edition/dp/0262560992",
+      "publish_date" : "1995-12-21"
+    },
+    {
+      "id": 18,
+      "title": "The Art of Computer Programming",
+      "author" : "Donald Knuth",
+      "publisher" : "Addison Wesley",
+      "genre" : "Computer Science",
+      "description" : "This first volume in the series begins with basic programming concepts and techniques, then focuses more particularly on information structures—the representation of information inside a computer, the structural relationships between data elements and how to deal with them efficiently.",
+      "image_url" : "https://upload.wikimedia.org/wikipedia/en/thumb/6/62/ArtOfComputerProgramming.jpg/220px-ArtOfComputerProgramming.jpg",
+      "buy_link" : "http://www.amazon.com/The-Art-Computer-Programming-Vols/dp/0201485419",
+      "publish_date" : "1968-02-21"
+    },
+    {
+      "id": 19,
+      "title": "The Pragmatic Programmer: From Journeyman to Master",
+      "author" : "Andrew Hunt",
+      "publisher" : "Addison Wesley",
+      "genre" : "Computer Science",
+      "description" : "The Pragmatic Programmer illustrates the best practices and major pitfalls of many different aspects of software development. Whether youre a new coder, an experienced programm.",
+      "image_url" : "http://ecx.images-amazon.com/images/I/41BKx1AxQWL._SX396_BO1,204,203,200_.jpg",
+      "buy_link" : "http://www.amazon.com/The-Pragmatic-Programmer-Journeyman-Master/dp/020161622X",
+      "publish_date" : "1999-10-11"
+    },
+    {
+      "id": 20,
+      "title": "Introduction to the Theory of Computation",
+      "author" : "Michael Spiser",
+      "publisher" : "PWS",
+      "genre" : "Computer Science",
+      "description" : "You gain a solid understanding of the fundamental mathematical properties of computer hardware, software, and applications with a blend of practical and philosophical coverage and mathematical treatments, including advanced theorems and proofs.",
+      "image_url" : "http://ecx.images-amazon.com/images/I/518FDFJF24L.jpg",
+      "buy_link" : "http://www.amazon.com/Introduction-Theory-Computation-Michael-Sipser/dp/113318779X",
+      "publish_date" : "1999-10-11"
+    },
+    {
+      "id": 21,
+      "title": "Code",
+      "author" : "Charles Petzold",
+      "publisher" : "Microsoft Press",
+      "genre" : "Computer Science",
+      "description" : "What do flashlights, the British invasion, black cats, and seesaws have to do with computers? In CODE, they show us the ingenious ways we manipulate language and invent new means of communicating with each other.",
+      "image_url" : "http://t3.gstatic.com/images?q=tbn:ANd9GcQVaCB5PON5qdPxZHdkPnkyku8iHCcvnmF_-JIaAr19J6cHCo0M",
+      "buy_link" : "http://www.amazon.com/Code-Language-Computer-Hardware-Software/dp/0735611319",
+      "publish_date" : "1999-10-23"
+    },
+    {
+      "id": 22,
+      "title": "The Lord Of The Rings",
+      "author" : "J R R Tolkien",
+      "publisher" : "George Allen & Unwin",
+      "genre" : "Fantasy",
+      "description" : "In ancient times the Rings of Power were crafted by the Elven-smiths, and Sauron, the Dark Lord, forged the One Ring, filling it with his own power so that he could rule all others. But the One Ring was taken from him, and though he sought it throughout Middle-earth, it remained lost to him. After many ages it fell by chance into the hands of the hobbit Bilbo Baggins.",
+      "image_url" : "https://upload.wikimedia.org/wikipedia/en/e/e9/First_Single_Volume_Edition_of_The_Lord_of_the_Rings.gif",
+      "buy_link" : "http://www.amazon.com/The-Lord-Rings-Anniversary-Edition/dp/0618640150",
+      "publish_date" : "1954-07-29"
+    },
+    {
+      "id": 23,
+      "title": "The Name of the Wind",
+      "author" : "Patrick Rothfuss",
+      "publisher" : "DAW Books",
+      "genre" : "Fantasy",
+      "description" : "The riveting first-person narrative of a young man who grows to be the most notorious magician his world has ever seen. From his childhood in a troupe of traveling players, to years spent as a near-feral orphan in a crime- ridden city, to his daringly brazen yet successful bid to enter a legendary school of magic.",
+      "image_url" : "http://ecx.images-amazon.com/images/I/514LJcIGpfL._SX300_BO1,204,203,200_.jpg",
+      "buy_link" : "http://www.amazon.com/dp/0756404746/",
+      "publish_date" : "2007-03-27"
+    },
+   {
+      "id": 24,
+      "title": "A Game of Thrones",
+      "author" : "George Martin",
+      "publisher" : "Voyager Books",
+      "genre" : "Fantasy",
+      "description" : "As Warden of the north, Lord Eddard Stark counts it a curse when King Robert bestows on him the office of the Hand. His honour weighs him down at court where a true man does what he will, not what he must … and a dead enemy is a thing of beauty.",
+      "image_url" : "http://ecx.images-amazon.com/images/I/51dStJrHIfL._SX301_BO1,204,203,200_.jpg",
+      "buy_link" : "http://www.amazon.com/Game-Thrones-Song-Fire-Book/dp/0553593714/",
+      "publish_date" : "1996-06-16"
+    },
+    {
+      "id": 25,
+      "title": "The Final Empire",
+      "author" : "Brandon Sanderson",
+      "publisher" : "Tor Books",
+      "genre" : "Fantasy",
+      "description" : "In a world where ash falls from the sky, and mist dominates the night, an evil cloaks the land and stifles all life. The future of the empire rests on the shoulders of a troublemaker and his young apprentice. Together, can they fill the world with color once more?",
+      "image_url" : "https://d.gr-assets.com/books/1437254833l/68428.jpg",
+      "buy_link" : "http://www.amazon.com/Mistborn-Final-Empire-Book-No/dp/0765350386/",
+      "publish_date" : "2006-07-25"
+    },
+    {
+      "id": 26,
+      "title": "The Eye of the World",
+      "author" : "Robert Jordan",
+      "publisher" : "Tor Books",
+      "genre" : "Fantasy",
+      "description" : "The Wheel of Time turns and Ages come and go, leaving memories that become legend. Legend fades to myth, and even myth is long forgotten when the Age that gave it birth returns again. In the Third Age, an Age of Prophecy, the World and Time themselves hang in the balance. What was, what will be, and what is, may yet fall under the Shadow.",
+      "image_url" : "https://d.gr-assets.com/books/1337818095l/228665.jpg",
+      "buy_link" : "http://www.amazon.com/Eye-World-Wheel-Time-Book/dp/0812511816/",
+      "publish_date" : "1990-01-15"
+    },
+    {
+      "id": 27,
+      "title": "The Lion, the Witch, and the Wardrobe",
+      "author" : "C S Lewis",
+      "publisher" : "Harper Collins",
+      "genre" : "Fantasy",
+      "description" : "When Peter, Susan, Edmund and Lucy took their first steps into the world behind the magic wardrobe, little do they realise what adventures are about to unfold. And as the story of Narnia begins to unfold, so to does a classic tale that has enchanted readers of all ages for over half a century.",
+      "image_url" : "https://d.gr-assets.com/books/1353029077l/100915.jpg",
+      "buy_link" : "http://www.amazon.com/Lion-Witch-Wardrobe-Chronicles-Narnia/dp/0064404994/",
+      "publish_date" : "1950-10-16"
+    },
+    {
+      "id": 28,
+      "title": "The Golden Compass",
+      "author" : "Philip Pullman",
+      "publisher" : "Knopf Books",
+      "genre" : "Fantasy",
+      "description" : "Here lives an orphaned ward named Lyra Belacqua, whose carefree life among the scholars at Oxford's Jordan College is shattered by the arrival of two powerful visitors. First, her fearsome uncle, Lord Asriel, appears with evidence of mystery and danger in the far North, including photographs of a mysterious celestial phenomenon called Dust and the dim outline of a city suspended in the Aurora Borealis that he suspects is part of an alternate universe. He leaves Lyra in the care of Mrs. Coulter, an enigmatic scholar and explorer who offers to give Lyra the attention her uncle has long refused her. In this multilayered narrative, however, nothing is as it seems. Lyra sets out for the top of the world in search of her kidnapped playmate, Roger, bearing a rare truth-telling instrument, the alethiometer.",
+      "image_url" : "https://d.gr-assets.com/books/1451271747l/119322.jpg",
+      "buy_link" : "http://www.amazon.com/Golden-Compass-His-Dark-Materials/dp/0440418321/",
+      "publish_date" : "1996-04-16"
+    },
+    {
+      "id": 29,
+      "title": "American Gods",
+      "author" : "Neil Gaiman",
+      "publisher" : "Headline Review",
+      "genre" : "Fantasy",
+      "description" : "Days before his release from prison, Shadow's wife, Laura, dies in a mysterious car crash. Numbly, he makes his way back home. On the plane, he encounters the enigmatic Mr Wednesday, who claims to be a refugee from a distant war, a former god and the king of America. Together they embark on a profoundly strange journey across the heart of the USA, whilst all around them a storm of preternatural and epic proportions threatens to break.",
+      "image_url" : "https://d.gr-assets.com/books/1258417001l/4407.jpg",
+      "buy_link" : "http://www.amazon.com/American-Gods-Neil-Gaiman/dp/0380789035/",
+      "publish_date" : "2001-07-04"
+    },
+    {
+      "id": 30,
+      "title": "The Princess Bride",
+      "author" : "William Goldman",
+      "publisher" : "Ballantine Books",
+      "genre" : "Fantasy",
+      "description" : "What happens when the most beautiful girl in the world marries the handsomest prince of all time and he turns out to be...well...a lot less than the man of her dreams? As a boy, William Goldman claims, he loved to hear his father read the S. Morgenstern classic, The Princess Bride. But as a grown-up he discovered that the boring parts were left out of good old Dad's recitation, and only the good parts reached his ears.",
+      "image_url" : "https://d.gr-assets.com/books/1327903636l/21787.jpg",
+      "buy_link" : "http://www.amazon.com/Princess-Bride-Morgensterns-Classic-Adventure/dp/0156035219/",
+      "publish_date" : "2003-07-15"
+    },
+    {
+      "id": 31,
+      "title": "The Color of Magic",
+      "author" : " Terry Pratchett",
+      "publisher" : "Harper Books",
+      "genre" : "Fantasy",
+      "description" : "The Color of Magic is Terry Pratchett's maiden voyage through the now-legendary land of Discworld. This is where it all begins--with the tourist Twoflower and his wizard guide, Rincewind.",
+      "image_url" : "https://d.gr-assets.com/books/1413548806l/533613.jpg",
+      "buy_link" : "http://www.amazon.com/Color-Magic-Discworld-Terry-Pratchett/dp/0062225677/",
+      "publish_date" : "1983-02-23"
+    },
+    {
+      "id": 32,
+      "title": "A Wrinkle in Time",
+      "author" : "Madeleine LEngle",
+      "publisher" : "Yearling Books",
+      "genre" : "Fantasy",
+      "description" : "It was a dark and stormy night; Meg Murry, her small brother Charles Wallace, and her mother had come down to the kitchen for a midnight snack when they were upset by the arrival of a most disturbing stranger. .",
+      "image_url" : "https://d.gr-assets.com/books/1329061522l/18131.jpg",
+      "buy_link" : "http://www.amazon.com/Wrinkle-Time-Quintet/dp/0312367546/",
+      "publish_date" : "1973-03-15"
+    },
+    {
+      "id": 33,
+      "title": "Alice in Wonderland",
+      "author" : "Lewis Carroll",
+      "publisher" : "Xist Classics",
+      "genre" : "Fantasy",
+      "description" : "Alice's Adventure's in Wonderland, more commonly called, Alice in Wonderland, tells the weird and wonderful tale of a little girl who falls down a rabbit hole into a strange world..",
+      "image_url" : "https://d.gr-assets.com/books/1391458382l/13023.jpg",
+      "buy_link" : "http://www.amazon.com/Alices-Adventures-Wonderland-Xist-Classics-ebook/dp/B00TKVNH1E/",
+      "publish_date" : "1865-11-26"
+    },
+    {
+      "id": 34,
+      "title": "The Origin of Species",
+      "author" : "Charles Darwin",
+      "publisher" : "Signet Books",
+      "genre" : "History",
+      "description" : "Darwin’s reasoned, documented arguments carefully advance his theory of natural selection and his assertion that species were not created all at once by a divine hand but started with a few simple forms that mutated and adapted over time. Whether commenting on his own poor health, discussing his experiments to test instinct in bees, or relating a conversation about a South American burrowing roden.",
+      "image_url" : "https://d.gr-assets.com/books/1298417570l/22463.jpg",
+      "buy_link" : "http://www.amazon.com/Origin-Species-150th-Anniversary/dp/0451529065/",
+      "publish_date" : "2004-05-01"
+    },
+    {
+      "id": 35,
+      "title": "1776",
+      "author" : "David McCullough",
+      "publisher" : "Simon & Schuster",
+      "genre" : "History",
+      "description" : "America's most acclaimed historian presents the intricate story of the year of the birth of the United States of America. \"1776\" tells two gripping stories: how a group of squabbling, disparate colonies became the United States, and how the British Empire tried to stop them. A story with a cast of amazing characters from George III to George Washington, to soldiers and their families, this exhilarating book is one of the great pieces of historical narrative.",
+      "image_url" : "https://d.gr-assets.com/books/1306787560l/1067.jpg",
+      "buy_link" : "http://www.amazon.com/1776-David-McCullough/dp/0743226720/",
+      "publish_date" : "2005-07-04"
+    },
+    {
+      "id": 36,
+      "title": "The Guns of August",
+      "author" : "Barbara Tuchman",
+      "publisher" : "Ballantine Books",
+      "genre" : "History",
+      "description" : "Historian & Pulitzer Prize-winning author Barbara Tuchman has brought to life again the people and events that led up to WWI. With attention to fascinating detail, and an intense knowledge of her subject and its characters, she reveals just how the war started, why, and why it could have been stopped but wasn't. A classic historical survey of a time and a people we all need to know more about, THE GUNS OF AUGUST will not be forgotten.",
+      "image_url" : "https://d.gr-assets.com/books/1431760956l/11366.jpg",
+      "buy_link" : "http://www.amazon.com/Guns-August-Pulitzer-Prize-Winning-Outbreak/dp/0345476093/",
+      "publish_date" : "2004-08-03"
+    },
+    {
+      "id": 37,
+      "title": "The Rise and Fall of the Third Reich: A History of Nazi Germany",
+      "author" : " William Shirer",
+      "publisher" : "Simon and Schuster ",
+      "genre" : "History",
+      "description" : "In The Rise and Fall of the Third Reich, William L. Shirer gave us the definitive book on Hitler's German Empire. Based on his personal experiences as a war correspondent as well as the voluminous documents that came out of Germany after the war, this thrilling account of Hitler's reign is widely acclaimed to be one of the greatest historical works of our time.",
+      "image_url" : "https://d.gr-assets.com/books/1331223772l/767171.jpg",
+      "buy_link" : "http://www.amazon.com/Rise-Fall-Third-Reich-History/dp/1451651686/",
+      "publish_date" : "1960-11-15"
+    },
+    {
+      "id": 38,
+      "title": "The Diary of a Young Girl",
+      "author" : "Anne Frank",
+      "publisher" : "Bantam Books",
+      "genre" : "History",
+      "description" : "Discovered in the attic in which she spent the last years of her life, Anne Frank's remarkable diary has since become a world classic—a powerful reminder of the horrors of war and an eloquent testament to the human spirit.",
+      "image_url" : "https://d.gr-assets.com/books/1358276407l/48855.jpg",
+      "buy_link" : "http://www.amazon.com/Anne-Frank-Diary-Young-Girl/dp/0553296981/",
+      "publish_date" : "1947-07-11"
+    },
+    {
+      "id": 39,
+      "title": "A Distant Mirror: The Calamitous 14th Century",
+      "author" : "Barbara Tuchman",
+      "publisher" : "Random House",
+      "genre" : "History",
+      "description" : "Tuchman examines not only the great rhythms of history but the grain and texture of domestic life: what childhood was like; what marriage meant; how money, taxes, and war dominated the lives of serf, noble, and clergy alike. Granting her subjects their loyalties, treacheries, and guilty passions, Tuchman re-creates the lives of proud cardinals, university scholars, grocers and clerks, saints and mystics, lawyers and mercenaries, and, dominating all, the knight--in all his valor and “furious follies,” a “terrible worm in an iron cocoon.”",
+      "image_url" : "https://d.gr-assets.com/books/1403200553l/568236.jpg",
+      "buy_link" : "http://www.amazon.com/Distant-Mirror-Calamitous-14th-Century/dp/0345349571/",
+      "publish_date" : "1978-09-21"
+    },
+    {
+      "id": 40,
+      "title": "Guns, Germs, and Steel: The Fates of Human Societies",
+      "author" : "Jared Diamon",
+      "publisher" : "Norton and Company",
+      "genre" : "History",
+      "description" : "A global account of the rise of civilization that is also a stunning refutation of ideas of human development based on race. Until around 11,000 b.c., all peoples were still Stone Age hunter/gatherers. At that point, a great divide occurred in the rates that human societies evolved. In Eurasia, parts of the Americas, and Africa, farming became the prevailing mode of existence when indigenous wild plants and animals were domesticated by prehistoric planters and herders. As Jared Diamond vividly reveals, the very people who gained a head start in producing food would collide with preliterate cultures, shaping the modern world through conquest, displacement, and genocide.",
+      "image_url" : "https://d.gr-assets.com/books/1453215833l/1842.jpg",
+      "buy_link" : "http://www.amazon.com/Guns-Germs-Steel-Fates-Societies/dp/0393317552/",
+      "publish_date" : "1997-12-12"
+    },
+    {
+      "id": 41,
+      "title": "Falls the Shadow",
+      "author" : "Sharon Kay Penman",
+      "publisher" : "Ballantine Books",
+      "genre" : "History",
+      "description" : "This is Simon de Montfort's story—and the story of King Henry III, as weak and changeable as Montfort was brash and unbending. It is a saga of two opposing wills that would later clash in a storm of violence and betrayal, a story straight from the pages of history that brings the world of the thirteenth century completely, provocatively, and magnificently alive. Above all, this is a story of conflict and treachery, of human frailty and broken legends, a tale of pageantry and grandeur that is as unforgettable as it is real.",
+      "image_url" : "https://d.gr-assets.com/books/1448657270l/77448.jpg",
+      "buy_link" : "http://www.amazon.com/Falls-Shadow-Novel-Princes-Trilogy/dp/0312382464/",
+      "publish_date" : "1988-04-01"
+    },
+    {
+      "id": 42,
+      "title": "Genghis Khan and the Making of the Modern World",
+      "author" : "Jack Weatherford",
+      "publisher" : "Broadway Books",
+      "genre" : "History",
+      "description" : "Weatherford resurrects the true history of Genghis Khan, from the story of his relentless rise through Mongol tribal culture to the waging of his devastatingly successful wars and the explosion of civilization that the Mongol Empire unleashed.",
+      "image_url" : "https://d.gr-assets.com/books/1320531289l/93426.jpg",
+      "buy_link" : "http://www.amazon.com/Genghis-Khan-Making-Modern-World/dp/0609809644/",
+      "publish_date" : "2004-03-22"
+    },
+    {
+      "id": 43,
+      "title": "The Decline and Fall of the Roman Empire",
+      "author" : "Edward Gibbon",
+      "publisher" : "Modern Library",
+      "genre" : "History",
+      "description" : "Narrates the history of the Roman Empire from the second century A.D. to its collapse in the west in the fifth century and in the east in the fifteenth century, is widely considered the greatest work of history ever written. This abridgment retains the full scope of the original, but in a breadth comparable to a novel",
+      "image_url" : "https://d.gr-assets.com/books/1435759367l/19400.jpg",
+      "buy_link" : "http://www.amazon.com/Decline-Roman-Empire-Everymans-Library/dp/0307700763/",
+      "publish_date" : "1788-08-27"
+    },
+    {
+      "id": 44,
+      "title": "The Girl with the Dragon Tattoo",
+      "author" : "Steig Larsson",
+      "publisher" : "Knopf",
+      "genre" : "Crime",
+      "description" : "Mikael Blomkvist, a once-respected financial journalist, watches his professional life rapidly crumble around him. Prospects appear bleak until an unexpected (and unsettling) offer to resurrect his name is extended by an old-school titan of Swedish industry. The catch—and there's always a catch—is that Blomkvist must first spend a year researching a mysterious disappearance that has remained unsolved for nearly four decades. With few other options, he accepts and enlists the help of investigator Lisbeth Salander, a misunderstood genius with a cache of authority issues.",
+      "image_url" : "http://d.gr-assets.com/books/1327868566l/2429135.jpg",
+      "buy_link" : "http://www.amazon.com/Girl-Dragon-Tattoo-Millennium-Series/dp/0307949486",
+      "publish_date" : "2005-08-12"
+    },
+    {
+      "id": 45,
+      "title": "Gone Girl",
+      "author" : "Gillian Flynn",
+      "publisher" : "Broadway Books",
+      "genre" : "Crime",
+      "description" : "On a warm summer morning in North Carthage, Missouri, it is Nick and Amy Dunne's fifth wedding anniversary. Presents are being wrapped and reservations are being made when Nick's clever and beautiful wife disappears. Husband-of-the-Year Nick isn't doing himself any favors with cringe-worthy daydreams about the slope and shape of his wife's head, but passages from Amy's diary reveal the alpha-girl perfectionist could have put anyone dangerously on edge. Under mounting pressure from the police and the media—as well as Amy's fiercely doting parents—the town golden boy parades an endless series of lies, deceits, and inappropriate behavior. Nick is oddly evasive, and he's definitely bitter—but is he really a killer?",
+      "image_url" : "http://d.gr-assets.com/books/1397056917l/19288043.jpg",
+      "buy_link" : "http://www.amazon.com/Gone-Girl-Gillian-Flynn/dp/0307588378/",
+      "publish_date" : "2012-05-24"
+    },
+    {
+      "id": 46,
+      "title": "In Cold Blood",
+      "author" : "Truman Capote",
+      "publisher" : "Vintage Books",
+      "genre" : "Crime",
+      "description" : "On November 15, 1959, in the small town of Holcomb, Kansas, four members of the Clutter family were savagely murdered by blasts from a shotgun held a few inches from their faces. There was no apparent motive for the crime, and there were almost no clues.",
+      "image_url" : "http://d.gr-assets.com/books/1424931136l/168642.jpg",
+      "buy_link" : "http://www.amazon.com/Cold-Blood-Truman-Capote/dp/0679745580/",
+      "publish_date" : "1965-02-01"
+    },
+    {
+      "id": 47,
+      "title": "And Then There Were None",
+      "author" : "Agatha Christie",
+      "publisher" : "St. Martin's Griffin",
+      "genre" : "Crime",
+      "description" : "First, there were ten - a curious assortment of strangers summoned as weekend guests to a private island off the coast of Devon. Their host, an eccentric millionaire unknown to all of them, is nowhere to be found. All that the guests have in common is a wicked past they're unwilling to reveal - and a secret that will seal their fate. For each has been marked for murder. One by one they fall prey. Before the weekend is out, there will be none. And only the dead are above suspicion.",
+      "image_url" : "http://d.gr-assets.com/books/1391120695l/16299.jpg",
+      "buy_link" : "http://www.amazon.com/Then-There-Were-None/dp/0062073486/",
+      "publish_date" : "1939-11-06"
+    },
+    {
+      "id": 48,
+      "title": "A Study in Scarlet",
+      "author" : "Arthur Conan Doyle",
+      "publisher" : "Penguin Classics",
+      "genre" : "Crime",
+      "description" : "n the debut of literature's most famous sleuth, a dead man is discovered in a bloodstained room in Brixton. The only clues are a wedding ring, a gold watch, a pocket edition of Boccaccio's Decameron, and a word scrawled in blood on the wall. With this investigation begins the partnership of Sherlock Holmes and Dr. Watson. Their search for the murderer uncovers a story of love and revenge-and heralds a franchise of detective mysteries starring the formidable Holmes.",
+      "image_url" : "http://d.gr-assets.com/books/1348362236l/102868.jpg",
+      "buy_link" : "http://www.amazon.com/Study-Scarlet-Penguin-Classics/dp/0140439080/",
+      "publish_date" : "1887-02-07"
+    },
+    {
+      "id": 49,
+      "title": "The Godfather",
+      "author" : "Mario Puzo",
+      "publisher" : "Signet",
+      "genre" : "Crime",
+      "description" : "The story of Don Vito Corleone, the head of a New York Mafia family, inspired some of the most successful movies ever. It is in Mario Puzo's The Godfather that Corleone first appears. As Corleone's desperate struggle to control the Mafia underworld unfolds, so does the story of his family. The novel is full of exquisitely detailed characters who, despite leading unconventional lifestyles within a notorious crime family, experience the triumphs and failures of the human condition. Filled with the requisite valor, love, and rancor of a great epic, The Godfather is the definitive gangster novel.",
+      "image_url" : "http://d.gr-assets.com/books/1394988109l/22034.jpg",
+      "buy_link" : "http://www.amazon.com/Godfather-Signet-Mario-Puzo/dp/0451167716/",
+      "publish_date" : "1969-03-01"
+    },
+    {
+      "id": 50,
+      "title": "The Girl on the Train",
+      "author" : "Paula Hawkins",
+      "publisher" : "Riverhead Books",
+      "genre" : "Crime",
+      "description" : "achel takes the same commuter train every morning. Every day she rattles down the track, flashes past a stretch of cozy suburban homes, and stops at the signal that allows her to daily watch the same couple breakfasting on their deck. She’s even started to feel like she knows them. “Jess and Jason,” she calls them. Their life—as she sees it—is perfect. Not unlike the life she recently lost. And then she sees something shocking. It’s only a minute until the train moves on, but it’s enough. Now everything’s changed. Unable to keep it to herself, Rachel offers what she knows to the police, and becomes inextricably entwined in what happens next, as well as in the lives of everyone involved. Has she done more harm than good?",
+      "image_url" : "http://d.gr-assets.com/books/1421709869l/22557272.jpg",
+      "buy_link" : "http://www.amazon.com/Girl-Train-Paula-Hawkins/dp/1594633665/",
+      "publish_date" : "2015-01-13"
+    },
+    {
+      "id": 51,
+      "title": "Dark Places",
+      "author" : "Gillian Flynn",
+      "publisher" : "Vintage Crime",
+      "genre" : "Shaye Areheart Books",
+      "description" : "Libby Day was seven when her mother and two sisters were murdered in \"The Satan Sacrifice\" of Kinnakee, Kansas.\" She survived—and famously testified that her fifteen-year-old brother, Ben, was the killer. Twenty-five years later, the Kill Club—a secret secret society obsessed with notorious crimes—locates Libby and pumps her for details. They hope to discover proof that may free Ben. Libby hopes to turn a profit off her tragic history: She'll reconnect with the players from that night and report her findings to the club—for a fee. As Libby's search takes her from shabby Missouri strip clubs to abandoned Oklahoma tourist towns, the unimaginable truth emerges, and Libby finds herself right back where she started—on the run from a killer.",
+      "image_url" : "http://d.gr-assets.com/books/1354988288l/5886881.jpg",
+      "buy_link" : "http://www.amazon.com/Dark-Places-Gillian-Flynn/dp/0307341577/",
+      "publish_date" : "2009-05-05"
+    },
+    {
+      "id": 52,
+      "title": "The Silence of the Lambs",
+      "author" : "Thomas Harris",
+      "publisher" : "Arrow",
+      "genre" : "Crime",
+      "description" : "There's a killer on the loose who knows that beauty is only skin deep, and a trainee investigator who's trying to save her own hide. The only man that can help is locked in an asylum. But he's willing to put a brave face on - if it will help him escape.",
+      "image_url" : "http://d.gr-assets.com/books/1390426249l/23807.jpg",
+      "buy_link" : "http://www.amazon.com/Silence-Lambs-Hannibal-Lecter/dp/0312924585/",
+      "publish_date" : "1988-03-11"
+    },
+    {
+      "id": 53,
+      "title": "The Elephant Tree",
+      "author" : "R.D. Ronald",
+      "publisher" : "Matador",
+      "genre" : "Crime",
+      "description" : "Mark Fallon is an overworked detective investigating a spate of attacks at a string of high profile city centre nightclubs. Scott is a dejected 24 year old struggling to make ends meet working for his brother and supplementing his income with a small-scale drug dealing operation. Angela is an attractive 23 year old, raised by her father, a career criminal and small time drug dealer who supplies Scott with cannabis. This is a chilling tale spanning a few months in the lives of Scott and Angela, where realizations about the present combine with shocking revelations from the past leading to an apocalyptic climax where they no longer know whom they can trust.",
+      "image_url" : "http://d.gr-assets.com/books/1327248026l/9293020.jpg",
+      "buy_link" : "http://www.amazon.com/Elephant-Tree-R-D-Ronald/dp/1848764561/",
+      "publish_date" : "2010-08-25"
+    },
+    {
+      "id": 54,
+      "title": "The Murder of Roger Ackroyd",
+      "author" : "Agatha Christie",
+      "publisher" : "Black Dog and Leventhal Publishers",
+      "genre" : "Crime",
+      "description" : "In the village of King's Abbot, a widow's sudden suicide sparks rumors that she murdered her first husband, was being blackmailed, and was carrying on a secret affair with the wealthy Roger Ackroyd. The following evening, Ackroyd is murdered in his locked study--but not before receiving a letter identifying the widow's blackmailer. King's Abbot is crawling with suspects, including a nervous butler, Ackroyd's wayward stepson, and his sister-in-law, Mrs. Cecil Ackroyd, who has taken up residence in the victim's home. It's now up to the famous detective Hercule Poirot, who has retired to King's Abbot to garden, to solve the case of who killed Roger Ackroyd--a task in which he is aided by the village doctor and narrator, James Sheppard, and by Sheppard's ingenious sister, Caroline.",
+      "image_url" : "http://d.gr-assets.com/books/1327248026l/9293020.jpg",
+      "buy_link" : "http://www.amazon.com/Murder-Roger-Ackroyd-Hercule-Mysteries/dp/0062073567/",
+      "publish_date" : "1926-02-21"
+    },
+    {
+      "id": 55,
+      "title": "Ready Player One",
+      "author" : "Ernest Cline",
+      "publisher" : "Random House NY",
+      "genre" : "Science Fiction",
+      "description" : "In the year 2044, reality is an ugly place. The only time teenage Wade Watts really feels alive is when he's jacked into the virtual utopia known as the  OASIS. Wade's devoted his life to studying the puzzles hidden within this world's digital confines, puzzles that are based on their creator's obsession with the pop culture of decades past and that promise massive power and fortune to whoever can unlock them. When Wade stumbles upon the first clue, he finds himself beset by players willing to kill to take this ultimate prize. The race is on, and if Wade's going to survive, he'll have to win—and confront the real world he's always been so desperate to escape.",
+      "image_url" : "https://d.gr-assets.com/books/1406383612l/9969571.jpg",
+      "buy_link" : "http://www.amazon.com/Ready-Player-One-A-Novel/dp/0307887448",
+      "publish_date" : "2011-08-11"
+    }
+  ],
+
+  "users" : [
+    {
+      "email_id": "firstuser@example.com",
+      "id" : 1,
+      "name" : "First User",
+      "image" : "http://www.freevectors.net/files/large/ManAvatar.jpg"
+    },
+    {
+      "email_id": "secondsuser@example.com",
+      "id" : 2,
+      "name" : "Second User",
+      "image" : "http://www.freevectors.net/files/medium/FreeVectorBusinessManAvatarSilhouette.jpg"
+    },
+    {
+      "email_id": "thirduser@example.com",
+      "id" : 3,
+      "name" : "Third User",
+      "image" : "http://www.freevectors.net/files/large/DetectiveAvatar.jpg"
+    },
+    {
+      "email_id": "fourthuser@example.com",
+      "id" : 4,
+      "name" : "Fourth User",
+      "image" : "http://www.freevectors.net/files/large/WomanAvatar.jpg"
+    },
+    {
+      "email_id": "fifthuser@example.com",
+      "id" : 5,
+      "name" : "Fifth User",
+      "image" : "http://www.freevectors.net/files/large/BeautyWomanAvatar.jpg"
+    }
+  ],
+
+  "bookreviews": [
+    {
+      "book_id": 1,
+      "user_id": 1,
+      "comment": "I didn't love this book. I know I'm in the minority, and part of me is glad about that. I mean it when I say this book deserves recognition, and honestly, I'd rather people were reading this and following a heroine as independent as Katniss, rather than a simp like Bella or Bethany. The Hunger Games is high-quality YA, intelligently written, and despite its flaws it's worthy of success.",
+      "comment_date": "2015-01-07"
+    },
+    {
+      "book_id": 1,
+      "user_id": 3,
+      "comment": "This book was amazing! From the moment you started reading it, you were sitting on the edge of your seat, heart pounding, and not wanting to put the book down! I felt so connected to the characters and felt involved with their lives. I laughed, cried, and gasped my way to the end!",
+      "comment_date": "2008-04-14"
+    },
+    {
+      "book_id": 2,
+      "user_id": 5,
+      "comment": "Any book that arrives heavily hyped usually has a ton of marketing power behind it. Sure, there are critical reviews to consider, but these days consumers are more aware than ever of the dollars at stake behind book and film negotiations. Which means that there's a lot of pressure riding on any book to live up to its promise, particularly one that comes from a 23-year-old author who has already landed a 3-book deal and signed away the movie rights.",
+      "comment_date": "2011-10-02"
+    },
+    {
+      "book_id": 3,
+      "user_id": 3,
+      "comment": "OMG, this short story was absolutely fantastic. Who is this author and why is he not on everyone's radar. Must read, don't think about it, it's a short story and won't take up much of your time and I think it's only 99 cents, just go get it! Hurry...go.......why are you still reading this...gooooo.",
+      "comment_date": "2012-03-12"
+    },
+    {
+      "book_id": 3,
+      "user_id": 4,
+      "comment": "I was very quickly drawn to the main character in this story. Once I started reading, I didn't stop until the end - literally one sitting. I thought I knew at one point what was going to happen, then I changed my mind and thought something different. Then I gave up trying to guess...sort of. Short story, lasting thoughts. I really, really enjoyed reading this!",
+      "comment_date": "2011-09-07"
+    },
+    {
+      "book_id": 4,
+      "user_id": 1,
+      "comment": "No one should argue the importance Dune. It laid the foundations for a great deal of the themes and constructs in modern science fiction. Frank Herbert was as important to the genre as Isaac Asimov and Arthur Clarke. Unfortunately, just like them, he's quite dated, and his books can be a labor to read. One thing he maintained from old science fiction was prim and scientific dialogue that no one would ever actually speak. I've known many scientists, and they don't talk like this. You're not going to convince me a child does.",
+      "comment_date": "2013-07-30"
+    },
+    {
+      "book_id": 4,
+      "user_id": 4,
+      "comment": "When people ask me what my favorite book is, Dune is always my answer. Words cannot even do justice to what an epic tale this is. We learn about spirituality, human nature, politics, religion, and the making of a hero.",
+      "comment_date": "2013-05-13"
+    },
+    {
+      "book_id": 5,
+      "user_id": 2,
+      "comment": "This book blew my mind, & while reading it it catapulted into my top five favorites. The Dispossessed is about utopia, revolution & math. Le Guin's science-fiction is precisely what I like; for some reason, I think she & Gene Wolfe share an important trait, but I can't quite put my finger on it. Maybe it's just that they are among my most favorites.",
+      "comment_date": "2016-02-05"
+    },
+    {
+      "book_id": 5,
+      "user_id": 5,
+      "comment": "This story has really stuck with me although I read it only once as an undergrad. Focused on the disorientation of a man coming from a planet with almost no resources to a much more abundant world, who has no idea what to make of everything he sees.",
+      "comment_date": "2013-02-05"
+    },
+    {
+      "book_id": 6,
+      "user_id": 1,
+      "comment": "This story has really stuck with me although I read it only once as an undergrad. Focused on the disorientation of a man coming from a planet with almost no resources to a much more abundant world, who has no idea what to make of everything he sees.",
+      "comment_date": "2015-05-5"
+    },
+    {
+      "book_id": 7,
+      "user_id": 2,
+      "comment": "This is good classic scifi from a writer who should be much better known than he is, which, although a bit dated, has some uncanny insights to offer. Set in a world where the body and mind are commodity it takes a scathing look at the materialistic, faceless corporate mentality through cyberpunk mirrorshades. Except of course it was written way before the term 'cyberpunk' was even coined. Definitely worth07 r3a1d.",
+      "comment_date": "2007-03-15"
+    },
+    {
+      "book_id": 7,
+      "user_id": 3,
+      "comment": "Fakes you into thinking it's the Count of Monte Cristo IN! SPACE! for a few minutes, then thinks better of it. Not a deep book, but it is a fun read, and Bester's vision of a future full of mega-corporations and rogue lone agents predates cyberpunk by a good thirty years. Hell, take out a few dated turns of phrase and you could almost pass this off as a modern story.",
+      "comment_date": "2007-05-10"
+    },
+    {
+      "book_id": 9,
+      "user_id": 1,
+      "comment": "Not only is this my favorite science fiction novel of all-time, it's among my favorite fiction books period. It's a fascinating examination of the never-ending struggle between the will of the masses and the determination of the individual to change the world, or in this case, the universe.",
+      "comment_date": "2007-01-07"
+    },
+    {
+      "book_id": 9,
+      "user_id": 3,
+      "comment": "It's hard for me to review the Foundation series objectively; it was one of the first classic SF novels I read. I love the ideas explored even as I realize the prose is relatively simple. Who cares, when the story is this interesting?",
+      "comment_date": "2007-03-13"
+    },
+    {
+      "book_id": 9,
+      "user_id": 4,
+      "comment": "You know, when I first read this book I remember thinking how darn smart Asimov was. And I can still see that, but as I get older, it just feels like he rewrote the Roman Empire (which he is always telling people he did) with some math added. And not very good math at that. He keeps talking about how you can't predict the actions of one person anymore than you can predict the actions of one gas molecule and yet he keeps doing it. It's incredibly annoying. Then again maybe I was just mad because I figured out he's an exclamation mark addict like David Brin.",
+      "comment_date": "2011-01-25"
+    },
+    {
+      "book_id": 10,
+      "user_id": 2,
+      "comment": "The book is always better than the film, but I'd never read 2001 before. What I didn't know, until reading the foreword, is that this novel was literally written in tandem with the film, with Clarke and Kubrick feeding each other ideas. At some points, however, filming overtook writing, or vice versa, and the two stories, though similar, split along two different paths.",
+      "comment_date": "2008-03-28"
+    },
+    {
+      "book_id": 10,
+      "user_id": 5,
+      "comment": "As I got closer to the end of the book I realized that the story wasn't strictly about any of the characters within, but instead was all about the journey. I loved this book, and will proceed to eventually read the whole series.",
+      "comment_date": "2016-02-04"
+    },
+    {
+      "book_id": 11,
+      "user_id": 1,
+      "comment": "An essential, well-written reference, and one it's quite possible to read through several times, picking up new info each time. That having been said....this book never, I felt, adequately communicated THE LOVE. The pseudocode employed throughout is absolutely wretched, at times (especially in later chapters) binding up and abstracting away subsidiary computational processes not with actual predefined functions but english descriptions of modifications thereof -- decide whether you're writing code samples for humans or humans-simulating-automata, please, and stick to one.",
+      "comment_date": "2007-02-13"
+    },
+    {
+      "book_id": 12,
+      "user_id": 2,
+      "comment": "The book was awesome! Abelson and Sussman have created a masterpiece. It provides a great introduction to computer science. The book contains a lot of back referencing and you need to understand previous material in order to grok what you're currently reading. The exercises are key - you can probably accomplish it without doing them, but they really, really help reinforcing the knowledge. They are also fun to do.",
+      "comment_date": "2012-12-31"
+    },
+    {
+      "book_id": 12,
+      "user_id": 4,
+      "comment": "Nearly a decade ago when I first started college as a wide eyed computer science student, this book instilled a deep passion for programming into me. To this day, I can pick up and reread any section of this book and that passion is reinvigorated. There have been volumes written about the brilliance and beauty of this book by people smarter than me. Every bit of this praise is deserved, and I do not need to add to that chorus.",
+      "comment_date": "2010-07-10"
+    },
+    {
+      "book_id": 12,
+      "user_id": 5,
+      "comment": "A work of art. SICP will make you a better programmer in the same way that reading Dostoevsky will make you a better writer..",
+      "comment_date": "2013-04-10"
+    },
+    {
+      "book_id": 13,
+      "user_id": 3,
+      "comment": "Steve McConnell's Code Complete 2 is a classic piece of literature in Software Development. I joined a book club for reading this book, and the discussions along the way were some of the most valuable I've had. It was very rewarding to me to see many of the pieces of advice given reaffirming my own coding practices and the way things are done here at SEP, but I certainly took some new information away. One of the main lessons taught throughout the book is that code should be easy to understand. Levels of abstraction, clear class and variable names, information hiding, coding standards - they all leave one less detail you have to juggle in your mind when trying to understand the code you're reading.",
+      "comment_date": "2009-09-28"
+    },
+    {
+      "book_id": 14,
+      "user_id": 1,
+      "comment": "A wonderful, wonderful exploration of a mathematical system that according to its authors is a blend of \"continuous and discreet mathematics\". It also forms a foundation to understand Donald Knuth's epic exploration of algorithms, the seven-books series on the \"Art of Computer Programming\". Like with all the books by Knuth, if the reader is able to find an error which is \"technically, historically, typographically, or politically incorrect\", he/she will be rewarded with 2.56 US dollars, which according to Knuth is \"one hexadecimal dollar\"!",
+      "comment_date": "2014-04-01"
+    },
+    {
+      "book_id": 14,
+      "user_id": 4,
+      "comment": "Steve McConnell's Code Complete 2 is a classic piece of literature in Software Development. I joined a book club for reading this book, and the discussions along the way were some of the most valuable I've had. It was very rewarding to me to see many of the pieces of advice given reaffirming my own coding practices and the way things are done here at SEP, but I certainly took some new information away. One of the main lessons taught throughout the book is that code should be easy to understand. Levels of abstraction, clear class and variable names, information hiding, coding standards - they all leave one less detail you have to juggle in your mind when trying to understand the code you're reading.",
+      "comment_date": "2009-09-28"
+    },
+    {
+      "book_id": 15,
+      "user_id": 3,
+      "comment": "As a shameless Tracy Kidder fan, I found this book quite extraordinary. Written in 1981, it chronicles the building of a 32-bit microcomputer at Data General. This was a time when the competitive environment for computer advancement was heating up to a furious pace. Today, these times read like ancient history, exceptt for the fact that it was the dawning of an age.",
+      "comment_date": "2013-12-24"
+    },
+    {
+      "book_id": 15,
+      "user_id": 4,
+      "comment": "This is a fascinating book to read after a quarter-century of personal computing. While the statistics about Data General's corporate growth are rather dull (and more than a little humorous considering the money that would later be made), the journey of this final generation of minicomputer builders is not only a fascinating tale but also a description of the missing link between the straight-laced 1960s IBM empire and the post-hippie two-guys-in-a-garage 1980s entrepreneur.",
+      "comment_date": "2007-08-03"
+    },
+    {
+      "book_id": 16,
+      "user_id": 1,
+      "comment": "A good experience overall. This isn't a book you read, but one that you do. Worth looking into especially if you teach computing, or if you feel you need some refreshing as a practitioner. Basically, you build a simple computer practically from scratch, going from Nand to Tetris so to speak.",
+      "comment_date": "2012-04-09"
+    },
+    {
+      "book_id": 17,
+      "user_id": 2,
+      "comment": "Is this book great? -Yes, it is an awesome book. \nWhy is it awesome? -The entire book is written as a series of questions, which forces you ask yourself questions about the content along the way. \nDoesn't that get annoying?  -Not really. \nWill I learn Lisp? Not really. \nWhat will I do? Master recursion. Build a Lisp.",
+      "comment_date": "2007-08-03"
+    },
+    {
+      "book_id": 17,
+      "user_id": 5,
+      "comment": "This is a really neat little book about recursion, written in Scheme. It's written completely in a Q&A format, with some funny banter and non-sequitur thrown in. What this format does is it encourages you to think about the questions it asks before reading about their answers. Sometimes, the questions are impossible to answer with the knowledge you have, but usually you can kind of tell when those are coming (the beginnings of chapters) and not spend too much time thinking about them. It starts out extremely basic, with simple recursive functions like getting the length of a linked list, and the first few chapters will all be things you know off the top of your head from an introductory CS course in college. However, as the book progresses, you see some really neat things like collecting values using lambdas inside recursions, the Y combinator, and even an implementation of a Scheme interpreter in Scheme!",
+      "comment_date": "2012-04-09"
+    },
+    {
+      "book_id": 19,
+      "user_id": 4,
+      "comment": "This is essentially a self-help guide for programmers, the kind of book that enumerates the habits of Good and Happy People and makes you feel slightly guilty about not practicing most of them, but probably won't result in you forsaking your evil ways and stepping on the path toward Nirvana. Hunt and Thomas are friendly but occasionally annoying gurus. Their cloying metaphors (boiled frogs, etc) and kitsch jokes are offputting, and some of their advice borders on insult. One assumes that when they devote a whole section to interpersonal communication that they are targetting the particularly closeted and uncouth breed of computer geek recently emerged from the dark and brutish cave of high school, struggling to make headway in a world full of messy, inconsistent, emotional people who don't even know how to reverse grep an Apache log.",
+      "comment_date": "2009-02-02"
+    },
+    {
+      "book_id": 20,
+      "user_id": 2,
+      "comment": "Anyone wishes to learn about automata, context-free languages, and Turing machines needs to pick up this book. I'm not even kidding. Sipser is such a clear writer and can describe concept things very lucidly. My favorite thing about this book compared to other mathematical books is that Sipser explicitly gives the 'Proof Idea' before delving into a proof. Most people that use proofs are probably familiar with the sensation of finishing reading a proof only to wonder what in the world just happened. This hardly happens in this book.",
+      "comment_date": "2015-01-15"
+    },
+    {
+      "book_id": 20,
+      "user_id": 5,
+      "comment": "Runs out of depth really early, but I learned my basics of automata theory from this lovely little hardback and will always love it for that. Remains the clearest exposition of the fundamental formalisms of which I'm aware. There's plenty of books with much more meat, and you'll inevitably need them ",
+      "comment_date": "2008-03-28"
+    },
+    {
+      "book_id": 21,
+      "user_id": 2,
+      "comment": "After reading this book, I can see behind the pixels on my computer screen. I know what I'm really looking at. So many layers of abstraction are removed by learning about how logic gates can be arranged as processors and RAM, how code is simply a representation of those microscopic switches being flipped, and how pixels are simply a graphical interpretation of the state of particular switches. Moreover, I also have a little bit of an understanding of the historical evolutions these inventions and conventions went through: not just how computers work, but why they work that way and how they came to be.",
+      "comment_date": "2012-10-12"
+    },
+    {
+      "book_id": 21,
+      "user_id": 5,
+      "comment": "My opinion on this book is really divided : on the one hand I enjoy some chapters, on the other hand I hardly managed to restrain myself from flipping through other chapters. Basically, this book designs and builds a basic computer by introducing in each chapter a concept or a technology used inside computers. It was written from 1987 to 1999, consequently one shouldn't expect any description of newest technologies.",
+      "comment_date": "2013-03-12"
+    },
+    {
+      "book_id": 22,
+      "user_id": 2,
+      "comment": "If you want a purely enraptured detailing all of and only of love provoked by these pages, look elsewhere. If you desire an analysis of the fundamental roots of fantasy and how this book fits in within the wider scope of the literary genre, it is not here. If you crave a complete and utter breakdown of all the faults this novel begets on the larger realm of reality, you will be unsatisfied. I have nothing that goes fully one way, or the other, or even some objective mixture of the three. Instead, I have a story. Perhaps you wish to read it.",
+      "comment_date": "2014-09-16"
+    },
+    {
+      "book_id": 22,
+      "user_id": 3,
+      "comment": "The book in the picture is not the book i own. The one i own i couldn't find a picture of. But this picture of this book comes very close to it. \nThis book is about travel, friendship, honor, plane heroism, going on even when everything around you is against you.\nIt takes you into a world far away. A wonderous tale. That keeps you reading.",
+      "comment_date": "2007-04-14"
+    },
+    {
+      "book_id": 23,
+      "user_id": 3,
+      "comment": "They say writers should write what they love, what they're passionate about, and Patrick Rothfuss loves stories. The Name of the Wind introduces us to Kvothe, a legendary figure now living a quiet life as an innkeeper. This is the first book in a trilogy, and takes us through the first day of Kvothe telling his story to The Chronicler, a wandering scribe and collector of stories. Rothfuss also shows us the power of stories. Kvothe is shaped both by the stories others tell about him as he grows up, and eventually by the stories he tells about himself.",
+      "comment_date": "2007-07-25"
+    },
+    {
+      "book_id": 24,
+      "user_id": 1,
+      "comment": "I HATE it so much I had to get a new hardback copy to read so I could underline all the parts I HATE about it so much and post them on Goodreads.\nI HATE it with such a passion I also bought copies for all my friends and family, also in new hardback editions, so they could HATE it along with me.",
+      "comment_date": "2014-01-12"
+    },
+    {
+      "book_id": 24,
+      "user_id": 4,
+      "comment": "No good people. No bad people. Just people. The most machavillian fantasy you'll ever read. Fantasy at its best. It's a different flavor then Tolkein, but George R.R. Martin is better, and a lot more epic in scope.",
+      "comment_date": "2007-07-25"
+    },
+    {
+      "book_id": 25,
+      "user_id": 2,
+      "comment": "Just as I expected, this book was FANTASTIC. The story, the characters, the world, the magic system--I loved it all! It was a wonderful first book in a series--satisfying on its own, yet there's still plenty to explore in future books (which I will definitely be reading soon!)",
+      "comment_date": "2015-01-28"
+    },
+    {
+      "book_id": 25,
+      "user_id": 5,
+      "comment": "Wow. So, the catch line to this book is: What if the chosen one fails? That he does not defeat the great evil that he is prophesied to defeat? Well, Brandon Sanderson plays on that thought like no other. And that, is why this book is very good. I do warn, it is a little dark and depressingly evil in some cases, but it is a so good. Elantris had an underlying theme about Truth, and Mistborn has an underlying theme about Hope.",
+      "comment_date": "2007-06-26"
+    },
+    {
+      "book_id": 26,
+      "user_id": 1,
+      "comment": "This is only the first in a series that I think gets better as it goes. I know other people think differently. Some think the first books are better, and that the series just gets old. I don't! Part of what I love about the series is that you get to know the characters. You get to feel for them, and love them. You also get to admire the intricacy with which Jordan interweaves his world.",
+      "comment_date": "2008-12-08"
+    },
+    {
+      "book_id": 27,
+      "user_id": 2,
+      "comment": "One of the highlight texts of my childhood, picture yourself stepping into an ordinary looking but-not so ordinary wardrobe and being immersed in a fantasy world of myth, magic and gore. C.S. Lewis has incorporated the many elements of fantasy and has delivered each element with impeccable precision.",
+      "comment_date": "2016-02-04"
+    },
+    {
+      "book_id": 27,
+      "user_id": 4,
+      "comment": "Overall I enjoyed this book. But this is one of those books that I'd recommend to read before watching the film. I found it really hard to actually connect with the characters and enjoy the writing and story properly because i watched the film before i read the book and all i could think of was how dramatised the film was or how 'that wasn't in the film'. Like I said overall I enjoyed it but just felt like I couldn't really enjoy as much as I'd have liked to because I'd watched the very dramatised holly wood film before reading it!",
+      "comment_date": "2016-02-05"
+    },
+    {
+      "book_id": 27,
+      "user_id": 5,
+      "comment": "A slim volume, yet it covers quite a story and doesn't shy from description either. A children's book written the way they ought to be: a rich use of language, a varied and extended vocabulary, not dumbed down, bland, lifeless prose that felt like it was composed by text message as some of today's children's authors write. A book that demands the attention of children as they read.",
+      "comment_date": "2016-01-08"
+    },
+    {
+      "book_id": 28,
+      "user_id": 3,
+      "comment": "The golden compass trilogy seems like a natural progression in christian literature. yes, it is christian literature, the same way the chronicles of narnia are. aslan is only a lion when the reader is about 10 or so in the united states. after a point, he unrepentantly becomes jesus. and the four children are like, the gospels or something. and the story is somewhat ruined then, because as an adult, you can't just shoehorn jesus into a lion outfit without snickering a little.",
+      "comment_date": "2007-12-13"
+    },
+    {
+      "book_id": 29,
+      "user_id": 1,
+      "comment": "This is a tough review for me to write. I'm not exactly sure what it is about this book that I don't like. I'm not sure there even IS something I don't like. Since I don't want to just leave you all with the ever popular \"I'm just not that into it\".",
+      "comment_date": "2012-01-24"
+    },
+    {
+      "book_id": 29,
+      "user_id": 3,
+      "comment": "In this unique love letter to the United States, Gaiman manages to celebrate its underground spiritual traditions, glory in the magnificence of its landmarks, landscapes, and bizarre tourist traps, and--most important--both mourn and venerate its pagan (often immigrant) gods in decline, battered and diminished though they may be by the shallowness and speed of a technological world. The gods are indeed the best part of this very good book: they are degenerate and threadbare, and yet still gods, capable of inspiring allegiance and terror.",
+      "comment_date": "2016-01-11"
+    },
+    {
+      "book_id": 30,
+      "user_id": 4,
+      "comment": "This is a literary treasure and one that I can not recommend more highly. Let me start by saying that prior to reading this book I had probably seen the movie version a dozen times or so and ABSOLUTELY LOVE IT!! I only mention this so that you know where I'm coming from in case you are not a fan of the movie as I think if you like one you will like the other and, conversely, if you didn’t like the movie, the book may not appeal to you as much.",
+      "comment_date": "2011-04-07"
+    },
+    {
+      "book_id": 30,
+      "user_id": 5,
+      "comment": "Cynical. Have no heart. Have no good taste in books. Just want mindless action and independent sword-wielding women as main characters. Don’t like overpowered men. Nor women, for that matter. Don’t believe in love at first sight. Hate damsels in distress. Hate perfection. You get the point.",
+      "comment_date": "2007-12-13"
+    },
+    {
+      "book_id": 31,
+      "user_id": 1,
+      "comment": "Tried to start him at the beginning, as many of my dear friends love him. However, this book showed no particular charm nor skill of construction. It is an early piece, so this unpractised work is to be expected. The jokes were more worthy of groans than guffaws, and I was left feeling rather let down, since he's been compared to the superlatively funny Douglas Adams.",
+      "comment_date": "2007-10-12"
+    },
+    {
+      "book_id": 32,
+      "user_id": 2,
+      "comment": "A Wrinkle In Time is about three courageous and adventurous kids named Charles Wallace, Meg, and Calvin. Their objective is to save Meg's and Charles's dad. During the book the three w's helped the three kids find their dad. When they finally found their dad The Man With The Red Eyes hypnotized Charles so he could become an evil genius. Which in fact they don't succeed.",
+      "comment_date": "2016-02-04"
+    },
+    {
+      "book_id": 32,
+      "user_id": 5,
+      "comment": "I love these books! Somehow I missed these in middle school when for many students they were required reading. Fun to finally pick them up and go through them along with my eleven year old. I didn't realize they had Christian undertones, very excited about that.",
+      "comment_date": "2016-02-03"
+    },
+    {
+      "book_id": 33,
+      "user_id": 3,
+      "comment": "if you really love this book, please do not read on! I really did not enjoy the book, and I'm a little surprised that it's considered a classic. The one thing I did enjoy was that there were many imaginative scenes - all of the different places that she went, like the tea party, the garden, etc. But, the characters were drawn very poorly - they were simply drawn, and most were just annoying (even Alice!). Most of the characters in the great \"wonderland\" were either cruel, mean or contrary (or didn't make any sense). I would not have a child read this either. It's probably written for ages 5-7, but the dialogue doesn't make much sense, and with the constant threats of \"beheading\" and other such scenes, I recommend that no child read it! ",
+      "comment_date": "2007-07-13"
+    },
+    {
+      "book_id": 33,
+      "user_id": 4,
+      "comment": "This book makes perfect sense if you had a misspent youth and went in for psychedelic substances. Just as Lewis Carroll undoubtedly did. Well he certainly liked opium.",
+      "comment_date": "2016-01-19"
+    },
+    {
+      "book_id": 34,
+      "user_id": 1,
+      "comment": "Such a freakin' genius! and the sadest part is, that his \"science\" literally killed him. if you've read a lot in Darwin (as I have) you come to understand that as a religious man, his studies seriously conflicted with his beliefs. I hate it when I hear someone say that Darwin says, \"we come from monkeys.\" because that is not the case.",
+      "comment_date": "2009-09-24"
+    },
+    {
+      "book_id": 34,
+      "user_id": 4,
+      "comment": "I swear I cannot figure what all the fuss is about. This is a science book. It was sometimes a bit tough to read because of the depth into detail. If I were an anthropologist I'm sure I would more appreciate that detail, but as a layman it did at times seem too thick.",
+      "comment_date": "2011-11-11"
+    },
+    {
+      "book_id": 35,
+      "user_id": 2,
+      "comment": "n 1776 David McCullough captures the importance of that year's quintessential struggle for our country. By focusing on this single year, as opposed to the entire war, McCullough is able to dissect more minutely the individual battles, turning points, specific leaders, and the result is one of the most humanistic depictions of George Washington I've ever read. Here he becomes more than mythic god of the American past, but rather a living, breathing, flawed man.",
+      "comment_date": "2014-01-11"
+    },
+    {
+      "book_id": 35,
+      "user_id": 5,
+      "comment": "This is an interesting book that describes in personal detail the battles of the early revolution. We see George and company in Boston, New York City, Pennsylvania and New Jersey. McCullough paints portraits of the military leaders of those campaigns, Howe primarily, and Clinton for the Brits, Greene, Knox, GW and a handful of others for the Yanks. He shows us some of GW’s correspondence and we learn of his disaffection for New Englanders. The troops were a rag tag bunch and George was constantly strained to keep them from running away, serving out their enlistments and going home, dying of various diseases.",
+      "comment_date": "2015-09-09"
+    },
+    {
+      "book_id": 36,
+      "user_id": 3,
+      "comment": "You could almost be excused for thinking that the highest praise one could give a work of non-fiction would be that it reads like a work of fiction. I haven’t looked at any of the other reviews for this book yet, but I would be prepared to bet that many of them say this read like a novel. And it is an incredibly dramatic story and some of the characters are larger than life – but this is no novel.",
+      "comment_date": "2009-03-06"
+    },
+    {
+      "book_id": 37,
+      "user_id": 2,
+      "comment": "You boil this book down, strip it to the foundations, and what the reader finds is darkness of the human soul. Bred in the alleyways and gutters of Vienna before the first world war, this was the angry and hateful opposite of God’s shining light, the ancient shadows that live in the basement of our souls, given life and expression on the palette of a failed artist.",
+      "comment_date": "2015-07-16"
+    },
+    {
+      "book_id": 37,
+      "user_id": 5,
+      "comment": "The detail with which this book deals with the Third Reich and the unspeakable evil that was Hitler's Germany is almost too much to take. Some of the discriptions, particularly towards the end of 'medical' experimentation, are simply too shocking and too challenging to read in one sitting. If you need to be reminded of just how evil the bastards in charge of Germany in the 30s and 40s really were then this is the book you need to read.",
+      "comment_date": "2010-05-09"
+    },
+    {
+      "book_id": 38,
+      "user_id": 3,
+      "comment": "I confess to feeling slightly voyeuristic while reading this. It was constantly in the back of my mind that this was no ordinary novel, or even a true-to-life account. This was someone’s diary. Every page written in confidence, each word revealing the thoughts closest to the heart of this young girl. As a journal-keeper myself, I sometimes find myself wondering, “What if someone else were to read this?” which causes me to wonder how much to filter my words.",
+      "comment_date": "2008-01-22"
+    },
+    {
+      "book_id": 39,
+      "user_id": 1,
+      "comment": "What an extraordinary read it is when one book is as action packed as thirty riveting novels. And if it also contains rich and erudite disquisitions and is narrated in a language as clear and flowing as water from a spring, then the volume must be given a preferential place in one’s library.",
+      "comment_date": "2015-09-19"
+    },
+    {
+      "book_id": 39,
+      "user_id": 4,
+      "comment": "A vivid and detailed look into a lost world. The major players are The Black Death, The Hundred Years War, the sick, uproarious joke of chivalric valor, The Papal Schism, ruinous taxation, serfdom, petty feudal institutions, the utter absence of reason among the so-called ruling classes, murderous vengeance, horrendous peculation, brigandry, the subjection of women, the sheer endless cruelty of mankind, crusade against the \"infidel,\" and so on.",
+      "comment_date": "2014-11-04"
+    },
+    {
+      "book_id": 40,
+      "user_id": 2,
+      "comment": "I liked this book, and it taught me a bunch of things I hadn't known before I read it. Jared Diamond has clearly had a more interesting life than most of us, and spent significant amounts of time in a wide variety of different kinds of society, all over the world. He says he got the basic idea from a conversation he had back in the 70s with a friend in New Guinea. His friend, who later became a leader in the independence movement, wanted to talk about \"cargo\" (manufactured goods, technology). \"Why is it,]\" he asked, \"that you Europeans have so much more cargo than we do?\" Diamond thought he had come up with a good question, and wrote the book in an attempt to answer it.",
+      "comment_date": "2014-11-04"
+    },
+    {
+      "book_id": 41,
+      "user_id": 1,
+      "comment": "I've found most Historical fiction to be too factual and not dramatic enough. In cases where the drama was heavy, the facts are off Anyway, I know my standards are high but that's the way it is and that's why I'm very glad I've found Penman. This tale centers around the power struggle between Earl Simon de Montfort, a true Historical figure, and King Henry III. As the latter continues to show his incompetence, Simon realizes he must fight against the tyranny of the British king. To make this even harder is the fact that the earl's sons have grown up with the sons of Henry III, which includes soon to be Edward I (Longshanks) . . . and, Simon is married to Henry's sister.",
+      "comment_date": "2014-11-04"
+    },
+    {
+      "book_id": 42,
+      "user_id": 5,
+      "comment": "This is a book that can and should be read by everyone, at least all with the slightest interest in world history. I feel this so adamantly since what it tells us does away with serious misconceptions about the Mongol Empire. It explains in a clear and comprehensible manner how the world we live in today has been improved by Mongol practices. It is stated that the book is revisionary, but I believe wholeheartedly in what we are told. It is clear and thoroughly documented. What we are told just plain makes sense!",
+      "comment_date": "2013-05-13"
+    },
+    {
+      "book_id": 43,
+      "user_id": 3,
+      "comment": "The history of human civilization and society is basically a continuum of idiots, sociopaths, murderers and bores, punctuated by the occasional rational individual whose life is cut short by those very sociopaths that succeed him. Gibbon's classic documents a tiny cross-section of some of the most lamentably pathetic mistakes and awful personalities this doomed species has ever suffered. Oh, how times have changed.",
+      "comment_date": "2008-05-28"
+    },
+    {
+      "book_id": 44,
+      "user_id": 1,
+      "comment": "The original Swedish title of this book is 'Men Who Hate Women. If you ask me, it suits this story much better than catchier but less relevant 'The Girl with the Dragon Tattoo', because it is in fact about men doing all kinds of horrid things to women. So here is the first warning to you, if you don't handle violence against women and children well, skip this novel.",
+      "comment_date": "2010-03-10"
+    },
+    {
+      "book_id": 44,
+      "user_id": 4,
+      "comment": "Disgraced journalist Mikael Blomkvist is hired to solve the decades-old murder of Harriet Vanger, member of one of the wealthiest families in Sweden. Aided by a tattooed, antisocial hacker named Lisabeth Salander, Blomkvist unearths horrible skeletons lurking in the Vanger family closet...",
+      "comment_date": "2015-04-15"
+    },
+    {
+      "book_id": 45,
+      "user_id": 2,
+      "comment": "I'm pretty selective about new releases, but Gone Girl's opening (about a man studying his wife's skull in bed) and unique alternating POV structure promised a kind of He Said, She Said Crimes and Misdemeanors, a The Secret History with a sense of humor. I did really like the structure, along with some of the zingers, and some of the saucier images, but that's about it.",
+      "comment_date": "2012-12-31"
+    },
+    {
+      "book_id": 45,
+      "user_id": 5,
+      "comment": "This book was just way too much fun – and I mean that in a good way. I’m taking a leisurely drive down the garden path of the story, when BAM – right in the middle it makes a u-turn and we are on the damn highway doing 90 miles an hour (commonly referred to as a plot twist). Sweet Mother of Mercy!",
+      "comment_date": "2012-08-12"
+    },
+    {
+      "book_id": 46,
+      "user_id": 1,
+      "comment": "I saw \"Capote\" and wanted to learn more about the criminals and about the victims and how this notorious crime affected the small town in which it took place. Exceptional character depiction. I learned that they did a really good job of casting the criminals (I already knew they did a fantastic job of casting truman capote).",
+      "comment_date": "2006-12-19"
+    },
+    {
+      "book_id": 47,
+      "user_id": 2,
+      "comment": "This lovely mystery book is first and foremost about the administration of the long-overdue justice, right? At least that's what the mastermind behind it all believes. \nBut the question is - who has the right to decide what justice is? And who is to decide what punishment serves the crime? And is perceived justice at all costs the ultimate goal, or is it the frequently pointless work of a maniac? As a matter of fact, what is justice after all?",
+      "comment_date": "2012-09-12"
+    },
+    {
+      "book_id": 49,
+      "user_id": 1,
+      "comment": "The epic masterpiece of mafia fiction. Puzo is good and entertaining elsewhere, here is great and masterful. It is to mobster books what Godfather parts 1 & 2 are to mobster movies...a standard that can never be equalled. What really intrigues me about Puzo's presentation of the Corleone family, and something that does not translate as explicitly to the screen, is the incredible sense of moral and religious conviction that what they do is right and good. At times I found myself believing that the Corleone's were right to be who they were, or at the very least, that such a way of life in de-centralized Sicily, if not in 20th century America, was appropriate. Puzo does everything in this book; action, drama, romance, epic, humanity, pulp, and he does it all effortlessly.",
+      "comment_date": "2008-07-15"
+    },
+    {
+      "book_id": 49,
+      "user_id": 4,
+      "comment": "The Godfather is one of the best pieces of literature ever written. Mario Puzo paints this elaborate picture of the Sicilian mafia through the eyes of Michael Corleone, a returning Marine Corps hero who at first wants nothing to do with the elaborate crime family that his father has built.",
+      "comment_date": "2008-03-04"
+    },
+    {
+      "book_id": 50,
+      "user_id": 2,
+      "comment": "Woah. This is one unsettling little thriller and the best bit about it is that no one can be trusted, including the three female narrators who share the storytelling of this book. I literally read this entire novel in one sitting and I now need to find the words to convince you to go get your hands on it. RIGHT NOW.",
+      "comment_date": "2015-04-01"
+    },
+    {
+      "book_id": 50,
+      "user_id": 3,
+      "comment": "I didn't care at all about the mystery. It didn't even feel like there was one. It just felt like a tedious glimpse into the messed up lives of people I'd rather not know anything about",
+      "comment_date": "2015-01-08"
+    },
+    {
+      "book_id": 50,
+      "user_id": 5,
+      "comment": "Everyone in this book is absolutely terrible, and as a result, this book is a masterpiece in character study and development. It's also a well-written, precisely plotted psychological thriller, and deftly sketches one unreliable narrator after another. I guessed the culprit not too far into the book, but that didn't spoil my reading experience at all, particularly because the author drops so many diverting and convincing red herrings into the story.",
+      "comment_date": "2015-02-15"
+    },
+    {
+      "book_id": 51,
+      "user_id": 1,
+      "comment": "I highly recommend reading this whilst sitting in the sun with plenty of happy people around you (as I did) - that way you can avoid contracting something evil and nasty from its pages, and also avoid losing any hope you had for humanity. Okay, sorry, I make it sound so negative when actually this book is pretty fantastic if you can stomach the horrors within. I ate this up in a couple of days, finding every opportunity to read that I could.",
+      "comment_date": "2015-05-17"
+    },
+    {
+      "book_id": 52,
+      "user_id": 2,
+      "comment": "I really did though. What can I say? Yes, it’s grim and grisly. Harris likes to go into creepy detail about skinning people, disturbing bugs, and the ickiness of finding a severed head in a jar. It’s not gore galore though. It more disturbing than a gross, and that’s why I liked it. Buffalo Bill is making this gruesome outfit and he thinks about it like he’s some kind of runway designer. It’s kind of oddly and darkly funny.",
+      "comment_date": "2014-02-07"
+    },
+    {
+      "book_id": 52,
+      "user_id": 5,
+      "comment": "Another re-read of Silence of the Lambs, this time my favorite. Maybe it's because I'm more into the story and read them in the order of sequence and not popularity, I'm not sure, but this time around I found it even more fascinating than the first meet.",
+      "comment_date": "2015-03-29"
+    },
+    {
+      "book_id": 53,
+      "user_id": 3,
+      "comment": "This is a hard-hitting book, and through protagonist Scott takes a satirical look at generation disaffection. It illustrates a culture where young men are tired of bland jobs and predictable lifestyles and yearn for more. Scott isn’t forced into the bad choices he makes, which I’m sure accounts for some people being turned off the book. He chooses his path become he wants more – simple as that.",
+      "comment_date": "2015-11-27"
+    },
+    {
+      "book_id": 54,
+      "user_id": 4,
+      "comment": "I went into this book with a bit of an attitude. Roger Ackroyd is the only Agatha Christie book featured on the list of 1001 Books You Must Read Before You Die, and I was skeptical about the List's claim that this was the only Christie book worth reading. But, as much as it pains me to say this, I think the List is right on this one. At least a little - I'm definitely not suggesting that you should read this book and then never pick up a Christie novel ever again, but if you find yourself in a situation where you're going to spend a month on a desert island and can only bring one book, and the only books you've been offered are from the Agatha Christie canon, you should pick this one.",
+      "comment_date": "2011-01-07"
+    },
+    {
+      "book_id": 55,
+      "user_id": 2,
+      "comment": "For most of the first half of this book, I was unimpressed. The writing was flat, and the story was unremarkable. The book gets hype because of its pervasive use of 1980s popular culture, particularly its references to science fiction, fantasy, and video games. The problem was that most of these references served no purpose. Something would be described by pointing out its resemblance to something from a film or television show.",
+      "comment_date": "2016-01-05"
+    },
+    {
+      "book_id": 55,
+      "user_id": 5,
+      "comment": "I got to read an ARC of this, and it appealed to every geeky part of me. \nI'll probably write a blog about it later, but for now, a brief review: \nSimply said? This book is awesome.",
+      "comment_date": "2011-05-25"
+    }
+  ],
+
+  "userreadinglist" : [
+    {
+      "user_id": "1",
+      "book_id": "1"
+    },
+    {
+      "user_id": "1",
+      "book_id": "6"
+    },
+    {
+      "user_id": "1",
+      "book_id": "11"
+    },
+    {
+      "user_id": "1",
+      "book_id": "16"
+    },
+    {
+      "user_id": "1",
+      "book_id": "21"
+    },
+    {
+      "user_id": "1",
+      "book_id": "26"
+    },
+    {
+      "user_id": "1",
+      "book_id": "31"
+    },
+    {
+      "user_id": "1",
+      "book_id": "41"
+    },
+    {
+      "user_id": "1",
+      "book_id": "46"
+    },
+    {
+      "user_id": "1",
+      "book_id": "4"
+    },
+    {
+      "user_id": "1",
+      "book_id": "9"
+    },
+    {
+      "user_id": "1",
+      "book_id": "14"
+    },
+    {
+      "user_id": "1",
+      "book_id": "24"
+    },
+    {
+      "user_id": "1",
+      "book_id": "29"
+    },
+    {
+      "user_id": "1",
+      "book_id": "34"
+    },
+    {
+      "user_id": "1",
+      "book_id": "39"
+    },
+    {
+      "user_id": "1",
+      "book_id": "44"
+    },
+    {
+      "user_id": "1",
+      "book_id": "49"
+    },
+    {
+      "user_id": "1",
+      "book_id": "51"
+    },
+    {
+      "user_id": "2",
+      "book_id": "7"
+    },
+    {
+      "user_id": "2",
+      "book_id": "12"
+    },
+    {
+      "user_id": "2",
+      "book_id": "17"
+    },
+    {
+      "user_id": "2",
+      "book_id": "22"
+    },
+    {
+      "user_id": "2",
+      "book_id": "27"
+    },
+    {
+      "user_id": "2",
+      "book_id": "32"
+    },
+    {
+      "user_id": "2",
+      "book_id": "37"
+    },
+    {
+      "user_id": "2",
+      "book_id": "47"
+    },
+    {
+      "user_id": "2",
+      "book_id": "52"
+    },
+    {
+      "user_id": "2",
+      "book_id": "10"
+    },
+    {
+      "user_id": "2",
+      "book_id": "5"
+    },
+    {
+      "user_id": "2",
+      "book_id": "20"
+    },
+    {
+      "user_id": "2",
+      "book_id": "25"
+    },
+    {
+      "user_id": "2",
+      "book_id": "35"
+    },
+    {
+      "user_id": "2",
+      "book_id": "40"
+    },
+    {
+      "user_id": "2",
+      "book_id": "45"
+    },
+    {
+      "user_id": "2",
+      "book_id": "50"
+    },
+    {
+      "user_id": "2",
+      "book_id": "55"
+    },
+    {
+      "user_id": "3",
+      "book_id": "3"
+    },
+    {
+      "user_id": "3",
+      "book_id": "8"
+    },
+    {
+      "user_id": "3",
+      "book_id": "13"
+    },
+    {
+      "user_id": "3",
+      "book_id": "23"
+    },
+    {
+      "user_id": "3",
+      "book_id": "28"
+    },
+    {
+      "user_id": "3",
+      "book_id": "33"
+    },
+    {
+      "user_id": "3",
+      "book_id": "38"
+    },
+    {
+      "user_id": "3",
+      "book_id": "43"
+    },
+    {
+      "user_id": "3",
+      "book_id": "53"
+    },
+    {
+      "user_id": "3",
+      "book_id": "1"
+    },
+    {
+      "user_id": "3",
+      "book_id": "9"
+    },
+    {
+      "user_id": "3",
+      "book_id": "15"
+    },
+    {
+      "user_id": "3",
+      "book_id": "22"
+    },
+    {
+      "user_id": "3",
+      "book_id": "29"
+    },
+    {
+      "user_id": "3",
+      "book_id": "36"
+    },
+    {
+      "user_id": "3",
+      "book_id": "50"
+    },
+    {
+      "user_id": "3",
+      "book_id": "7"
+    },
+    {
+      "user_id": "4",
+      "book_id": "4"
+    },
+    {
+      "user_id": "4",
+      "book_id": "9"
+    },
+    {
+      "user_id": "4",
+      "book_id": "14"
+    },
+    {
+      "user_id": "4",
+      "book_id": "19"
+    },
+    {
+      "user_id": "4",
+      "book_id": "34"
+    },
+    {
+      "user_id": "4",
+      "book_id": "39"
+    },
+    {
+      "user_id": "4",
+      "book_id": "44"
+    },
+    {
+      "user_id": "4",
+      "book_id": "49"
+    },
+    {
+      "user_id": "4",
+      "book_id": "54"
+    },
+    {
+      "user_id": "4",
+      "book_id": "3"
+    },
+    {
+      "user_id": "4",
+      "book_id": "6"
+    },
+    {
+      "user_id": "4",
+      "book_id": "12"
+    },
+    {
+      "user_id": "4",
+      "book_id": "15"
+    },
+    {
+      "user_id": "4",
+      "book_id": "21"
+    },
+    {
+      "user_id": "4",
+      "book_id": "24"
+    },
+    {
+      "user_id": "4",
+      "book_id": "27"
+    },
+    {
+      "user_id": "4",
+      "book_id": "30"
+    },
+    {
+      "user_id": "4",
+      "book_id": "33"
+    },
+    {
+      "user_id": "5",
+      "book_id": "5"
+    },
+    {
+      "user_id": "5",
+      "book_id": "10"
+    },
+    {
+      "user_id": "5",
+      "book_id": "20"
+    },
+    {
+      "user_id": "5",
+      "book_id": "25"
+    },
+    {
+      "user_id": "5",
+      "book_id": "30"
+    },
+    {
+      "user_id": "5",
+      "book_id": "35"
+    },
+    {
+      "user_id": "5",
+      "book_id": "45"
+    },
+    {
+      "user_id": "5",
+      "book_id": "50"
+    },
+    {
+      "user_id": "5",
+      "book_id": "55"
+    },
+    {
+      "user_id": "5",
+      "book_id": "2"
+    },
+    {
+      "user_id": "5",
+      "book_id": "7"
+    },
+    {
+      "user_id": "5",
+      "book_id": "12"
+    },
+    {
+      "user_id": "5",
+      "book_id": "17"
+    },
+    {
+      "user_id": "5",
+      "book_id": "27"
+    },
+    {
+      "user_id": "5",
+      "book_id": "32"
+    },
+    {
+      "user_id": "5",
+      "book_id": "37"
+    },
+    {
+      "user_id": "5",
+      "book_id": "42"
+    },
+    {
+      "user_id": "5",
+      "book_id": "52"
+    }
+  ]
+}

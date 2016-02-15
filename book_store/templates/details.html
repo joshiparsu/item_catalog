@@ -1,0 +1,288 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+    <title>Your Reads...</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
+	<script type="text/javascript" src="{{ url_for('static', filename='prototype.js') }}" ></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='scriptaculous.js?load=effects') }}" ></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='java.js') }}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"> </script>
+
+    <script type="text/javascript">
+
+    $(function(){
+        $('#review_comment').on("keyup", action);
+            function action() {
+               if($('#review_comment').val().length > 0)
+               {
+                  $("#post_review").css("pointer-events", "auto");
+               }
+               else
+               {
+                  $("#post_review").css("pointer-events", "none");
+               }
+            }
+    });
+
+    $(function() {
+        $('#post_review').click(function(event) {
+            event.preventDefault();
+            var comment = $("#review_comment").val();
+
+            var bookid = $("#post_review").data("bookid");
+            var userid = $("#post_review").data("userid");
+            var userimage = $("#post_review").data("userimg");
+            var username = $("#post_review").data("username");
+
+            var values = {};
+            values['userid'] = userid.toString();
+            values['bookid'] = bookid.toString();
+            values['comment'] = comment.toString();
+            alert(JSON.stringify(values));
+
+            $.ajax({
+                type: 'POST',
+                url: '/processComment',
+                data: JSON.stringify(values, null, '\t'),
+                contentType: "application/json; charset=UTF-8",
+                success: function(response) {
+                    date = new Date();
+                    var post_date = (date.getFullYear() + "-" + date.getMonth() + "-" + date.getDate()).toString();
+
+                    var newReview = '<p class="book_review"> \
+                                        <img src="' + userimage +'" width="60px" height="60px" style="border-radius:9px; margin-left:5px"/> \
+                                        <span class="book_reviewer" style="position:absolute">' + username + '<br>' + post_date + '</span><br> \
+                                        <span>' + comment + '</span> \
+                                    </p>';
+
+                    $("#reviews_section").append(newReview);
+
+                    var removeCommentTags = "#post_review";
+                    $(removeCommentTags).remove();
+                    var removeCommentTags = "#review_comment";
+                    $(removeCommentTags).remove();
+                },
+                error: function(jqXHR, exception) {
+                    console.log("jqXHR.status = "  + jqXHR.status);
+                    console.log("jqXHR.responseText" + jqXHR.responseText);
+                }
+            });
+        });
+    });
+    $(function() {
+        $('#ProcessList').click(function(event) {
+            event.preventDefault();
+            var userid = $("#ProcessList").data("userid");
+            var bookid = $("#ProcessList").data("bookid");
+            var remove = $("#ProcessList").data("remove");
+            var values = {};
+            values['userid']= userid.toString();
+            values['bookid'] = bookid.toString();
+            values['remove'] = remove.toString();
+
+            $.ajax({
+                type: 'POST',
+                url: '/processReadList',
+                data: JSON.stringify(values, null, '\t'),
+                contentType: "application/json; charset=UTF-8",
+                success: function(response) {
+                    if(values['remove'] == "true")
+                    {
+                        $("#ProcessList").text("Add To List");
+                        $('#ProcessList').data('remove', false); 
+                    }
+                    else
+                    {
+                        $("#ProcessList").text("Remove it!!");
+                        $('#ProcessList').data('remove', true); 
+                    }
+
+                },
+                error: function(jqXHR, exception) {
+                    console.log("jqXHR.status = "  + jqXHR.status);
+                    console.log("jqXHR.responseText" + jqXHR.responseText);
+                }
+            });
+        });
+    });
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+
+       <div class="header" style="background:url(../../static/header.jpg) no-repeat center;">
+            <div class="logo"><a href="{{ url_for('HomePage') }}"><img src="../../static/logo.gif" border="0" /></a></div>            
+            <div id="menu">
+                <ul>                                                                       
+                    <li class="selected"><a href="{{ url_for('HomePage') }}">Home</a></li>
+                    <li><a href="{{ url_for('listBooks', page=1)}}">Books</a></li>
+                    <li><a href="{{ url_for('contactMe')}}">Contact Me</a></li>
+                </ul>
+            </div>
+
+            <div id="menu_right">
+                <div class="dropdown">
+                    {% if session['logged_in'] %}
+                        <a href="#" class="dropbtn">My Account</a>
+                        <div class="dropdown-content">
+                            <a href="{{ url_for('userReadingList') }}">My Books</a>
+                            <a href="{{ url_for('userReviews') }}">My Reviews</a>
+                            <a href="{{ url_for('logout') }}">Log out</a>
+                        </div>
+                    {% else %}
+                        <a href="{{ url_for('logIn') }}" class="dropbtn">Login</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div> 
+
+        <div class="center_content">
+       	    <div class="left_content">
+        	   <div class="crumb_nav">
+                    <a href="{{ url_for('HomePage') }}">Home</a>
+                    &gt;&gt; {{book.title}}
+                </div>
+                <div class="title">
+                    <span class="title_icon">
+                        <img src="../../static/bullet1.gif" />
+                    </span>
+                    {{book.title}}
+                </div>
+        
+        	<div class="feat_prod_box_details">
+            	<div class="prod_img">
+                    <a href="{{ url_for('showBook', book_id=book.id) }}">
+                        <img src="{{book.image_url}}" style="max-width:100%; max-height:100%;" border="0" />
+                    </a>
+                </div>
+                
+                <div class="prod_det_box">
+                	<div class="box_top"></div>
+                    <div class="box_center">
+                        <div class="prod_title">
+                            Details
+                        </div>
+                        <p class="details">
+                            {{book.description}}
+                        </p>
+                        {% if session['logged_in'] %}
+                            {% if read_by_user == True %}
+                                <a href="" class="buttonlink" style="margin:10px 20px;" data-bookid="{{book.id}}" data-userid="{{session['user_id']}}" data-remove="true" id="ProcessList">Remove it!!</a>
+                            {% else %}
+                                <a href="" class="buttonlink" style="margin:10px 20px;" data-bookid="{{book.id}}" data-userid="{{session['user_id']}}" data-remove="false" id="ProcessList">Add to list</a>
+                            {% endif %}
+                        {% endif %}
+                        <a href="{{book.buy_link}}" target="_blank" class="buttonlink" style="margin:10px 20px;" id="OrderNow">Order Now</a>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="box_bottom"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+
+            <div id="demo" class="demolayout">
+                <ul id="demo-nav" class="demolayout">
+                    <li><a class="active" href="#tab1">Reviews</a></li>
+                    <li><a class="" href="#tab2">More details</a></li>
+                </ul>
+        
+                <div class="tabs-container">
+                    <div style="display: block;" class="tab" id="tab1">
+                        {% if session['logged_in'] %}
+                            <div style="height:150px;">
+                                <textarea maxlength="1199" id="review_comment" style="width:98%; height:90%;"> </textarea>
+                            </div>
+                            <span class="buttonlink"
+                                    id="post_review"
+                                    data-bookid="{{book.id}}"
+                                    data-username="{{session['username']}}"
+                                    data-userid="{{session['user_id']}}"
+                                    data-userimg="{{session['picture']}}"
+                                    style="margin-left:375px;margin-top:10px;width:50px;text-align:center;pointer-events:none">Post</span>
+                        {% endif %}
+
+                        <span id="reviews_section">
+                            {% for review in reviews %}
+                                <p class="book_review">
+                                    <img src="{{review.image}}" width="60px" height="60px" style="border-radius:9px; margin-left:5px"/>
+                                    <span class="book_reviewer" style="position:absolute">
+                                        {{review.name}}
+                                        <br>
+                                        {{review.comment_date}}
+                                    </span>
+                                    <br>
+                                    <span>
+                                        {{review.comment}}
+                                    </span>
+                                </p>
+                            {% endfor %}
+                        </span>
+                        <div class="clear"></div>
+                    </div>
+                    <div style="display: none;" class="tab" id="tab2">
+                        <p class="more_details">
+                        </p>
+                        <ul class="list">
+                            <li>Autor : {{ book.author }}</li>
+                            <li>Publisher : {{ book.publisher }}</li>
+                            <li>Genre : {{ book.genre }}</li>
+                            <li>Publish Date : {{book.publish_date}}</li>
+                        </ul>
+                        <p class="more_details"> {{book.description}} </p>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div><!--end of left content-->
+        
+        <div class="right_content">
+            <div class="title">
+                <span class="title_icon">
+                    <img src="../../static/bullet2.gif" />
+                </span>
+                Our recommendations...
+            </div>
+            <div class="new_products">
+            {% for related_book in related_books %}
+                <div class="new_prod_box" id="new_prod_box">
+                    <a href="{{ url_for('showBook', book_id=related_book.id) }}" id="book_title">{{ related_book.title }}</a>
+                    <div class="new_prod_bg">
+                        <a href="{{ url_for('showBook', book_id=related_book.id) }}">
+                            <img src="{{related_book.image_url}}" class="thumb" border="0" />
+                        </a>
+                    </div>
+                </div>
+            {% endfor %}
+            </div>
+
+            <div class="clear"></div>
+            
+            <div class="title">
+                <span class="title_icon">
+                    <img src="../../static/bullet3.gif" />
+                </span>
+                About Our Store
+            </div> 
+            <div class="about">
+                <p>
+                    <img src="../../static/about.gif" class="right" />
+                    I'm a software engineer who is working on Windows driver development for past couple of years. However, lately, I've started learning things like Python, Flask, HTML5, CSS, jQuery etc. This is a simple project to demonstrate the skills that I've learnt over the last few months...
+                </p>
+            </div>
+        </div><!--end of right content-->       
+        <div class="clear"></div>
+    </div><!--end of center content-->
+</div>
+
+</body>
+<script type="text/javascript">
+
+var tabber1 = new Yetii({
+id: 'demo'
+});
+
+</script>
+</html>
+

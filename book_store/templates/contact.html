@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Your Reads...</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+
+    <script>
+    function validateForm()
+    {
+        var success = true;
+        $("#user_queries_form").each(function(){
+            if($(this).text()=="")
+            {
+                alert($(this).val());
+                $("#error_msg").html("Field needs filling");
+                success = false;
+            }
+        });
+        return success;
+    }
+
+    $(function() {
+        $('#send_query').on('click', function(event) {
+            event.preventDefault();
+            if(!validateForm())
+            {
+                alert('form field empty');
+                return;
+            }
+            var submitter = $("#submitter").val();
+            var email_id = $("#email_id").val();
+            var message = $("#message").val();
+
+            var values = {};
+            values['submitter']= submitter.toString();
+            values['email_id'] = email_id.toString();
+            values['message'] = message.toString();
+            alert('submitting form');
+
+            $.ajax({
+                type: 'POST',
+                url: '/userFeedback',
+                data: JSON.stringify(values, null, '\t'),
+                contentType: "application/json; charset=UTF-8",
+                success: function(result) {
+                    console.log("Query successfully submitted.");
+                    if (result) {
+                        $('.left_content').html(result);
+                        setTimeout(function() {
+                            window.location.href = "/";
+                        }, 4000);
+                    }
+                },
+                error: function(jqXHR, exception) {
+                    console.log("jqXHR.status = "  + jqXHR.status);
+                    console.log("jqXHR.responseText" + jqXHR.responseText);
+                }
+            });
+        });
+    });
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+
+        <div class="header" style="background:url(../../static/header.jpg) no-repeat center;">
+            <div class="logo">
+                <a href="{{ url_for('HomePage') }}"><img src="../../static/logo.gif" border="0" /></a>
+            </div>
+            <div id="menu">
+                <ul>                                                                       
+                    <li class="selected"><a href="{{ url_for('HomePage') }}">Home</a></li>
+                    <li><a href="{{ url_for('listBooks', page=1)}}">Books</a></li>
+                    <li><a href="{{ url_for('contactMe')}}">Contact Me</a></li>
+                </ul>
+            </div>
+
+            <div id="menu_right">
+                <div class="dropdown">
+                    {% if session['logged_in'] %}
+                        <a href="#" class="dropbtn">My Account</a>
+                        <div class="dropdown-content">
+                            <a href="{{ url_for('userReadingList') }}">My Books</a>
+                            <a href="{{ url_for('userReviews') }}">My Reviews</a>
+                            <a href="{{ url_for('logout') }}">Log out</a>
+                        </div>
+                    {% else %}
+                        <a href="{{ url_for('logIn') }}" class="dropbtn">Login</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>     
+
+        <div class="center_content">
+            <div class="left_content">
+                <div class="title">
+                    <span class="title_icon"><img src="../../static/bullet1.gif" /></span>
+                    Contact Us
+                </div>
+
+                <div class="feat_prod_box_details">
+                    <p class="details">
+                        I'm hearing. Please let me know your feedback/comments/complements related to yourreads...
+                    </p>
+                    <form id="user_queries_form">
+                        <div class="contact_form">
+                            <div class="form_subtitle">all fields are requierd</div>          
+                            <div class="form_row">
+                                <label class="contact"><strong>Name:</strong></label>
+                                <input type="text" class="contact_input" id="submitter" required/>
+                                <span id="error_msg"></span>
+                            </div>
+
+                            <div class="form_row">
+                                <label class="contact"><strong>Email:</strong></label>
+                                <input type="text" class="contact_input" id="email_id" required/>
+                                <span id="error_msg"></span>
+                            </div>
+
+                            <div class="form_row">
+                                <label class="contact"><strong>Message:</strong></label>
+                                <textarea class="contact_textarea" id="message" required></textarea>
+                                <span id="error_msg"></span>
+                            </div>
+                        
+                            <div class="form_row">
+                                <span class="buttonlink" style="margin-left:1px;"  id="send_query">Send</span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="clear"></div>
+            </div><!--end of left content-->
+        
+            <div class="right_content">
+                <div class="title">
+                    <span class="title_icon"><img src="../../static/bullet3.gif" /></span>
+                    About Store
+                </div> 
+                <div class="about">
+                    <p>
+                        <img src="../../static/about.gif" />
+                        I'm a software engineer who is working on Windows driver development for past couple of years. However, lately, I've started learning things like Python, Flask, HTML5, CSS, jQuery etc. This is a simple project to demonstrate the skills that I've learnt over the last few months...
+                    </p>
+                </div>
+                
+                <div class="right_box">
+                </div>         
+            </div><!--end of right content-->
+            <div class="clear"></div>
+        </div><!--end of center content-->
+    </div>
+</body>
+</html>
