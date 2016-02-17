@@ -38,6 +38,19 @@ class Books(Base):
             #'rating' : self.rating
         }
 
+    def serializeToXml(self, content):
+        content.append("<Book>")
+        content.append("<Id>%s</Id>" % self.id)
+        content.append("<Title>%s</Title>" % self.title)
+        content.append("<Author>%s</Author>" % self.author)
+        content.append("<Publisher>%s</Publisher>" % self.publisher)
+        content.append("<Genre>%s</Genre>" % self.genre)
+        content.append("<Description>%s</Description>" % self.description)
+        content.append("<ImageUrl>%s</ImageUrl>" % self.image_url)
+        content.append("<BuyLink>%s</BuyLink>" % self.buy_link)
+        content.append("<PublishDate>%s</PublishDate>" % self.publish_date)
+        content.append("</Book>")
+
 class Users(Base):
     __tablename__ = 'users'
 

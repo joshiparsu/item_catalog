@@ -42,6 +42,11 @@
 
             $.ajax({
                 type: 'POST',
+                beforeSend: function (request)
+                {
+                    var token = $("#post_review").data("token");
+                    request.setRequestHeader("X-CSRFToken", token);
+                },
                 url: '/processComment',
                 data: JSON.stringify(values, null, '\t'),
                 contentType: "application/json; charset=UTF-8",
@@ -82,6 +87,11 @@
 
             $.ajax({
                 type: 'POST',
+                beforeSend: function (request)
+                {
+                    var token = $("#ProcessList").data("token");
+                    request.setRequestHeader("X-CSRFToken", token);
+                },
                 url: '/processReadList',
                 data: JSON.stringify(values, null, '\t'),
                 contentType: "application/json; charset=UTF-8",
@@ -168,9 +178,25 @@
                         </p>
                         {% if session['logged_in'] %}
                             {% if read_by_user == True %}
-                                <a href="" class="buttonlink" style="margin:10px 20px;" data-bookid="{{book.id}}" data-userid="{{session['user_id']}}" data-remove="true" id="ProcessList">Remove it!!</a>
+                                <span class="buttonlink"
+                                      style="margin:10px 20px;"
+                                      data-bookid="{{book.id}}"
+                                      data-userid="{{session['user_id']}}"
+                                      data-remove="true"
+                                      data-token="{{ csrf_token() }}"
+                                      id="ProcessList">
+                                        Remove it!!
+                                </span>
                             {% else %}
-                                <a href="" class="buttonlink" style="margin:10px 20px;" data-bookid="{{book.id}}" data-userid="{{session['user_id']}}" data-remove="false" id="ProcessList">Add to list</a>
+                                <span class="buttonlink" 
+                                      style="margin:10px 20px;"
+                                      data-bookid="{{book.id}}"
+                                      data-userid="{{session['user_id']}}"
+                                      data-remove="false"
+                                      data-token="{{ csrf_token() }}"
+                                      id="ProcessList">
+                                        Add to list
+                                </span>
                             {% endif %}
                         {% endif %}
                         <a href="{{book.buy_link}}" target="_blank" class="buttonlink" style="margin:10px 20px;" id="OrderNow">Order Now</a>
@@ -199,7 +225,9 @@
                                     data-username="{{session['username']}}"
                                     data-userid="{{session['user_id']}}"
                                     data-userimg="{{session['picture']}}"
-                                    style="margin-left:375px;margin-top:10px;width:50px;text-align:center;pointer-events:none">Post</span>
+                                    data-token="{{ csrf_token() }}"
+                                    style="margin-left:375px;margin-top:10px;width:50px;text-align:center;pointer-events:none">
+                                    Post</span>
                         {% endif %}
 
                         <span id="reviews_section">

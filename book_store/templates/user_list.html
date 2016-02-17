@@ -23,6 +23,11 @@
 
             $.ajax({
                 type: 'POST',
+                beforeSend: function (request)
+                {
+                    var token = $(".remove_book").data("token");
+                    request.setRequestHeader("X-CSRFToken", token);
+                },
                 url: '/processReadList',
                 data: JSON.stringify(values, null, '\t'),
                 contentType: "application/json; charset=UTF-8",
@@ -107,7 +112,8 @@
                                       data-activeindex="{{activeIndex}}"
                                       data-bookid="{{book.book_id}}" 
                                       data-userid="{{session['user_id']}}" 
-                                      data-remove="true">
+                                      data-remove="true"
+                                      data-token="{{ csrf_token() }}">
                                     <a href="" class="buttonlink" style="margin:10px 20px;">
                                         Remove it!!
                                     </a>

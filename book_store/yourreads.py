@@ -8,6 +8,8 @@ from flask import jsonify
 from flask import session as login_session
 from flask import make_response
 
+from flask.ext.seasurf import SeaSurf
+
 from sqlalchemy import create_engine
 from sqlalchemy import desc
 from sqlalchemy import func
@@ -26,6 +28,10 @@ from database_setup import UserReadingList
 from oauth2client.client import flow_from_clientsecrets
 from oauth2client.client import FlowExchangeError
 
+from datetime import datetime
+
+from functools import wraps
+
 import random
 import string
 import httplib2
@@ -33,9 +39,11 @@ import json
 import requests
 import bleach
 import time
-from datetime import datetime
+import dicttoxml
+
 
 app = Flask (__name__)
+csrf = SeaSurf(app)
 
 CLIENT_ID = json.loads(open('client_secret.json', 'r').read())['web']['client_id']
 
@@ -54,22 +62,60 @@ DBSession = sessionmaker(bind=engine)
 # session.rollback()
 session = DBSession()
 
+# A decorator method that makes sure that the request received is only served
+# if user is logged in
+def login_required(f):
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+        if login_session['logged_in'] is None:
+            return redirect(url_for('login', next=request.url))
+        return f(*args, **kwargs)
+    return decorated_function
+
+# A decorator method that makes sure that the request received is only served
+# if user is logged in is indeed mataches with the request sent by user
+def owner_required(f):
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+        content = json.loads(request.data)
+        userid = int(content['userid'])
+        if login_session['user_id'] != userid:
+            response = make_response(json.dumps('Current logged-in user id does not match.'),200)
+            response.headers['Content-Type'] = 'application/json'
+            return response
+        return f(*args, **kwargs)
+    return decorated_function
+
 @app.route('/', methods=['GET'])
 def HomePage():
-    featured_books = session.query(Books).order_by(Books.publish_date).limit(3)
-    new_books = session.query(Books).order_by(desc(Books.publish_date)).limit(3)
-    return render_template('index.html', featured_books=featured_books, new_books=new_books)
+    featured_books = session.query(Books).\
+                             order_by(Books.publish_date).\
+                             limit(3)
+
+    new_books = session.query(Books).\
+                        order_by(desc(Books.publish_date)).\
+                        limit(3)
+
+    return render_template('index.html',
+                            featured_books=featured_books,
+                            new_books=new_books)
+
 
 @app.route('/logIn')
 def logIn():
     # create a state token to prevent request forgery
-    state = ''.join(random.choice(string.ascii_uppercase + string.digits) for x in xrange(32))
+    state = ''.join(random.choice(string.ascii_uppercase + string.digits)
+                    for x in xrange(32))
     login_session['state'] = state
-    return render_template('login.html', STATE = state)
+
+    return render_template('login.html',
+                            STATE=state)
 
 # Disconnect based on provider
-# In future can be extended to let user login using other provider except "gplus"
+# In future can be extended to let user login using other providers
+# except "gplus"
 @app.route('/logout')
+@login_required
 def logout():
     if 'provider' in login_session:
         gdisconnect()
@@ -87,29 +133,44 @@ def logout():
         return redirect(url_for('HomePage'))
 
 # Show particular book details request by user
-# Note that if user is logged in, we would let user write review for the listed book
-# as well as we will let user add and/or remove the book from his/her list
+# Note that if user is logged in, we would let user write review for the
+# listed book as well as we will let user add and/or remove the book from
+# his/her list
 @app.route('/book/show/<int:book_id>')
 def showBook(book_id):
-    reviews = session.query(BookReviews.comment, BookReviews.comment_date, Users.name, Users.image).\
+    reviews = session.query(BookReviews.comment, BookReviews.comment_date,\
+                            Users.name, Users.image).\
                             join(Books).\
                             join(Users).\
-                            filter(and_(Books.id == BookReviews.book_id, BookReviews.user_id == Users.id)).\
+                            filter(and_(Books.id == BookReviews.book_id, \
+                                        BookReviews.user_id == Users.id)).\
                             filter(BookReviews.book_id == book_id).\
                             all()
     query = None
     read_by_user = True
     if login_session.get('logged_in',None) is not None:
-        query = session.query(func.count(UserReadingList.user_id).label('read_count')).\
-                                   filter(and_(UserReadingList.book_id == book_id, UserReadingList.user_id == login_session['user_id'])).\
-                                   first()
+        query = session.query(func.count(UserReadingList.user_id).\
+                              label('read_count')).\
+                              filter(and_(UserReadingList.book_id == book_id,\
+                                          UserReadingList.user_id == login_session['user_id'])).\
+                              first()
 
     if query is None or query[0] == 0:
         read_by_user = False
 
-    book = session.query(Books).filter_by(id = book_id).one()
-    related_books = session.query(Books).filter(Books.genre == book.genre, Books.title != book.title).limit(4)
-    return render_template('details.html', book=book, reviews=reviews, related_books=related_books, read_by_user=read_by_user)
+    book = session.query(Books).\
+                   filter_by(id = book_id).\
+                   one()
+    related_books = session.query(Books).\
+                            filter(Books.genre == book.genre,\
+                                   Books.title != book.title).\
+                            limit(4)
+
+    return render_template('details.html',
+                            book=book,
+                            reviews=reviews,
+                            related_books=related_books,
+                            read_by_user=read_by_user)
 
 # User is going thorough various books on page-by-page basis
 @app.route('/book/list/', methods=['GET'])
@@ -125,41 +186,52 @@ def listBooks(page=1):
     else:
         total_pages = (int(rows/PER_PAGE_ITEMS))
 
-    books = session.query(Books).all()[page * PER_PAGE_ITEMS - PER_PAGE_ITEMS : page * PER_PAGE_ITEMS]
-    return render_template('list_books.html', books=books, active_page=page, total_pages=total_pages)
+    books = session.query(Books).\
+                    all()[page * PER_PAGE_ITEMS - PER_PAGE_ITEMS : page * PER_PAGE_ITEMS]
+
+    return render_template('list_books.html',
+                            books=books,
+                            active_page=page,
+                            total_pages=total_pages)
 
 # If user is looged in, he/she can see what all books are added to his/her reading list.
 # While going through this list, user can remove book from his/her list too.
 @app.route('/userReadingList', methods=['GET'])
+@login_required
 def userReadingList():
-    if login_session['logged_in'] is None:
-        return logIn()
-    else:
-        user_books = session.query(UserReadingList.book_id, Books.title, Books.description, Books.image_url, Users.name, Users.image).\
-                                    join(Books).\
-                                    join(Users).\
-                                    filter(and_(UserReadingList.book_id == Books.id, UserReadingList.user_id == login_session['user_id'])).\
-                                    all()
-        return render_template('user_list.html', user_books=user_books)
+    user_books = session.query(UserReadingList.book_id,\
+                               Books.title, Books.description, Books.image_url,\
+                               Users.name, Users.image).\
+                         join(Books).\
+                         join(Users).\
+                         filter(and_(UserReadingList.book_id == Books.id,\
+                                     UserReadingList.user_id == login_session['user_id'])).\
+                         all()
+
+    return render_template('user_list.html',
+                            user_books=user_books)
 
 # If user is logged in, he/she can see what all reviews are posted by him/her. User can
 # modify the existing review, delete a review etc.
 @app.route('/userReviews', methods=['GET'])
+@login_required
 def userReviews():
-    if login_session['logged_in'] is None:
-        return logIn()
-    else:
-        reviews = session.query(BookReviews.comment, BookReviews.comment_date, Users.name, Users.image, Books.title, Books.image_url, Books.description, Books.id).\
-                                join(Books).\
-                                join(Users).\
-                                filter(and_(Books.id == BookReviews.book_id, BookReviews.user_id == login_session['user_id'])).\
-                                all()
+    reviews = session.query(BookReviews.comment, BookReviews.comment_date,\
+                            Users.name, Users.image, \
+                            Books.title, Books.image_url, Books.description, Books.id).\
+                      join(Books).\
+                      join(Users).\
+                      filter(and_(Books.id == BookReviews.book_id, \
+                                  BookReviews.user_id == login_session['user_id'])).\
+                      all()
 
-    return render_template('user_reviews.html', reviews=reviews)
+    return render_template('user_reviews.html',
+                            reviews=reviews)
 
 # Call back routine which is called when user logs-in via gplus.
 # We've to keep some of the information in our session so that it is accessible at other
 # places. We also have to go through couple checks to make sure user log in is successful.
+@csrf.exempt
 @app.route('/gconnect', methods=['POST'])
 def gconnect():
     # Validate state token
@@ -240,7 +312,8 @@ def gconnect():
     output += '!</h1>'
     output += '<img src="'
     output += login_session['picture']
-    output += ' " style = "width: 300px; height: 300px;border-radius: 150px;-webkit-border-radius: 150px;-moz-border-radius: 150px;"> '
+    output += ' " style = "width: 300px; height: 300px;border-radius: 150px;'
+    output += '-webkit-border-radius: 150px;-moz-border-radius: 150px;"> '
     return output
 
 # User is logging out.
@@ -272,25 +345,28 @@ def gdisconnect():
 
 # User has requested to add or remove particular book from his/her reading list
 @app.route('/processReadList', methods=['POST'])
+@login_required
+@owner_required
 def processReadList():
     content = json.loads(request.data)
     userid = int(content['userid'])
     bookid = int(content['bookid'])
     shouldRemove = content['remove']
 
-    if login_session['user_id'] != userid:
-        print ("user id does not match")
-        response = make_response(json.dumps('Current logged-in user id does not match.'),200)
-        response.headers['Content-Type'] = 'application/json'
-        return response
+#    if login_session['user_id'] != userid:
+#        print ("user id does not match")
+#        response = make_response(json.dumps('Current logged-in user id does not match.'),200)
+#        response.headers['Content-Type'] = 'application/json'
+#        return response
 
     if shouldRemove == "false":
         wantToRead = UserReadingList(user_id=userid, book_id=bookid)
         session.add(wantToRead)
     else:
         readByUser = session.query(UserReadingList).\
-                                   filter(and_(UserReadingList.book_id == bookid, UserReadingList.user_id == userid)).\
-                                   one()
+                             filter(and_(UserReadingList.book_id == bookid,\
+                                         UserReadingList.user_id == userid)).\
+                             one()
         session.delete(readByUser)
     session.commit()
 
@@ -300,6 +376,8 @@ def processReadList():
 
 # User has provided his/her review on particular book
 @app.route('/processComment', methods=['POST'])
+@login_required
+@owner_required
 def processComment():
     content = json.loads(request.data)
     userid = int(content['userid'])
@@ -307,12 +385,15 @@ def processComment():
     raw_comment = content['comment']
     comment = bleach.clean(raw_comment, strip=True)
 
-    if login_session['user_id'] != userid:
-        response = make_response(json.dumps('Current logged-in user id does not match.'),200)
-        response.headers['Content-Type'] = 'application/json'
-        return response
+ #   if login_session['user_id'] != userid:
+ #       response = make_response(json.dumps('Current logged-in user id does not match.'),200)
+ #       response.headers['Content-Type'] = 'application/json'
+ #       return response
     
-    newReview = BookReviews(book_id = bookid, user_id = userid, comment = comment, comment_date = datetime.now())
+    newReview = BookReviews(book_id = bookid, 
+                            user_id = userid, 
+                            comment = comment, 
+                            comment_date = datetime.now())
     session.add(newReview)
     session.commit()
 
@@ -322,19 +403,22 @@ def processComment():
 
 # User has requested to change his/her review for particular book
 @app.route('/modifyReview', methods=['POST'])
+@login_required
+@owner_required
 def modifyReview():
     content = json.loads(request.data)
     userid = int(content['userid'])
     bookid = int(content['bookid'])
     comment = content['comment']
 
-    if login_session['user_id'] != userid:
-        response = make_response(json.dumps('Current logged-in user id does not match.'), 200)
-        response.headers['Content-Type'] = 'application/json'
-        return response
+#    if login_session['user_id'] != userid:
+#        response = make_response(json.dumps('Current logged-in user id does not match.'), 200)
+#        response.headers['Content-Type'] = 'application/json'
+#        return response
 
     new_comment = session.query(BookReviews).\
-                                filter(and_(BookReviews.book_id == bookid, BookReviews.user_id == userid)).\
+                                filter(and_(BookReviews.book_id == bookid,\
+                                            BookReviews.user_id == userid)).\
                                 one()
     new_comment.comment = comment
     new_comment.comment_date = datetime.now()
@@ -346,19 +430,22 @@ def modifyReview():
 
 # User has requested to delete a reviews for given book
 @app.route('/deleteReview', methods=['POST'])
+@login_required
+@owner_required
 def deleteReview():
     content = json.loads(request.data)
     userid = int(content['userid'])
     bookid = int(content['bookid'])
 
-    if login_session['user_id'] != userid:
-        response = make_response(json.dumps('Current logged-in user id does not match.'),200)
-        response.headers['Content-Type'] = 'application/json'
-        return response
+#    if login_session['user_id'] != userid:
+#        response = make_response(json.dumps('Current logged-in user id does not match.'),200)
+#        response.headers['Content-Type'] = 'application/json'
+#        return response
     
     comment = session.query(BookReviews).\
-                            filter(and_(BookReviews.book_id == bookid, BookReviews.user_id == userid)).\
-                            one()
+                      filter(and_(BookReviews.book_id == bookid,\
+                                  BookReviews.user_id == userid)).\
+                      one()
     session.delete(comment)
     session.commit()
 
@@ -385,24 +472,49 @@ def userFeedback():
 
 @app.route('/jsonifyBooks', methods=['GET'])
 def jsonifyBooks():
-    books = session.query(Books).order_by(Books.publish_date).all()
+    books = session.query(Books).\
+                    order_by(Books.publish_date).\
+                    all()
+
     return jsonify(books=[book.serialize for book in books])
 
+@app.route('/xmlifyBooks', methods=['GET'])
+def xmlifyBooks():
+    books = session.query(Books).all()
+
+    content = []
+    content.append('<?xml version="1.0" encoding="UTF-8"?>')
+    content.append("<Books>")
+    
+    for book in books:
+        book.serializeToXml(content)
+
+    content.append("</Books>")
+    responseContent = str.join("\n", content)
+    responseContent = responseContent.replace('&', '&amp;')
+    response = make_response(responseContent, 200)
+    response.headers['Content-Type'] = 'text/xml'
+    return response
 
 # User Helper Functions
 # Creates a new user if already not created
 def createUser(login_session):
     try:
-        user = session.query(Users).filter_by(email_id=login_session['email']).one()
+        user = session.query(Users).\
+                       filter_by(email_id=login_session['email']).\
+                       one()
     except NoResultFound:
         user = None
 
     if user is None:
-        newUserId = session.query(func.count(Users.id)).scalar()
+        newUserId = session.query(func.count(Users.id)).\
+                                  scalar()
         newUser = Users(name=login_session['username'], id=newUserId+1, image=login_session['picture'], email_id=login_session['email'])
         session.add(newUser)
         session.commit()
-    user = session.query(Users).filter_by(email_id=login_session['email']).one()
+    user = session.query(Users).\
+                   filter_by(email_id=login_session['email']).\
+                   one()
     return user.id
 
 if __name__ == '__main__':

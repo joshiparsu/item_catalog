@@ -37,6 +37,11 @@
 
             $.ajax({
                 type: 'POST',
+                beforeSend: function (request)
+                {
+                    var token = $("#send_query").data("token");
+                    request.setRequestHeader("X-CSRFToken", token);
+                },
                 url: '/userFeedback',
                 data: JSON.stringify(values, null, '\t'),
                 contentType: "application/json; charset=UTF-8",
@@ -123,7 +128,7 @@
                             </div>
                         
                             <div class="form_row">
-                                <span class="buttonlink" style="margin-left:1px;"  id="send_query">Send</span>
+                                <span class="buttonlink" data-token="{{ csrf_token() }}" style="margin-left:1px;"  id="send_query">Send</span>
                             </div>
                         </div>
                     </form>

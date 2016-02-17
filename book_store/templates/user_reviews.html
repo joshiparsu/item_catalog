@@ -19,6 +19,7 @@
             var userid = $(this).data("userid");
             var bookid = $(this).data("bookid");
             var index = $(this).data("activeindex");
+            var token = $(this).data("token");
             var commentId = ("#comment") + index;
             var comment_text = $(commentId).text();
 
@@ -26,6 +27,7 @@
             $("#modify-comment-dialog").data("bookid", bookid);
             $("#modify-comment-dialog").data("index", index);
             $("#modify-comment-dialog").data("comment", comment_text);
+            $("#modify-comment-dialog").data("token", token);
 
             $("#modify-comment-dialog").dialog({
                 modal: true,
@@ -48,7 +50,8 @@
                         $(this).dialog('close');
                         modifyReviewCallback($(this).data("userid"),
                                              $(this).data("bookid"),
-                                             $("#newReviewComment").val());
+                                             $("#newReviewComment").val(),
+                                             $(this).data("token"));
                     }
                 },
                 hide: {
@@ -63,15 +66,19 @@
         });
     });
 
-    function modifyReviewCallback(userid, bookid, newComment)
+    function modifyReviewCallback(userid, bookid, newComment, token)
     {
             var values = {};
             values['userid']= userid.toString();
             values['bookid'] = bookid.toString();
-            values['comment'] = newComment.toString(); 
+            values['comment'] = newComment.toString();
 
             $.ajax({
                 type: 'POST',
+                beforeSend: function (request)
+                {
+                    request.setRequestHeader("X-CSRFToken", token);
+                },
                 url: '/modifyReview',
                 data: JSON.stringify(values, null, '\t'),
                 contentType: "application/json; charset=UTF-8",
@@ -86,7 +93,7 @@
     }
 
 
-    function deleteReviewCallback(userid, bookid, index)
+    function deleteReviewCallback(userid, bookid, index, token)
     {
         var values = {};
         values['userid']= userid.toString();
@@ -94,6 +101,10 @@
         $.ajax({
             type: 'POST',
             url: '/deleteReview',
+            beforeSend: function (request)
+            {
+                request.setRequestHeader("X-CSRFToken", token);
+            },
             data: JSON.stringify(values, null, '\t'),
             contentType: "application/json; charset=UTF-8",
             success: function(response) {
@@ -113,10 +124,12 @@
             var userid = $(this).data("userid");
             var bookid = $(this).data("bookid");
             var index = $(this).data("activeindex");
+            var token = $(this).data("token");
 
             $("#delete-confirm-dialog").data("userid", userid);
             $("#delete-confirm-dialog").data("bookid", bookid);
             $("#delete-confirm-dialog").data("index", index);
+            $("#delete-confirm-dialog").data("token", token);
             $("#delete-confirm-dialog").dialog({
                 modal: true,
                 title: "Confirm deletion",
@@ -130,7 +143,8 @@
                         $(this).dialog('close');
                         deleteReviewCallback($(this).data("userid"),
                                              $(this).data("bookid"),
-                                             $(this).data("index"));
+                                             $(this).data("index"),
+                                             $(this).data("token"));
                     },
                     "No": function () {
                         $(this).dialog('close');
@@ -214,7 +228,8 @@
                                 <span class="modify_review"
                                       data-activeindex="{{activeIndex}}"
                                       data-bookid="{{review.id}}" 
-                                      data-userid="{{session['user_id']}}">
+                                      data-userid="{{session['user_id']}}"
+                                      data-token="{{ csrf_token() }}">
                                     <span class="buttonlink" style="margin:10px 20px;">
                                         Modify...
                                     </span>
@@ -222,7 +237,8 @@
                                 <span class="delete_review"
                                       data-activeindex="{{activeIndex}}"
                                       data-bookid="{{review.id}}" 
-                                      data-userid="{{session['user_id']}}">
+                                      data-userid="{{session['user_id']}}"
+                                      data-token="{{ csrf_token() }}">
                                     <span class="buttonlink" style="margin:10px 20px;">
                                         Delete...
                                     </span>
